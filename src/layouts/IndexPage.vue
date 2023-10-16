@@ -3,7 +3,7 @@
     <q-page-container>
       <q-page>
         <div class="quote">
-          <div class="q-pt-xl q-px-xl full-width full-height flex flex-center fondo" v-bind:style="heroImage">
+          <div class="q-pt-xl q-px-xl full-width full-height flex flex-center" v-bind:style="heroImage">
             <h3 class="text-white text-center">
               A Data Reporting & Analytics infrastructure systems and platform
               for the music industry
@@ -228,7 +228,7 @@ export default {
   computed: {
     heroImage() {
       return {
-        backgroundImage: `url('https://7228775.fs1.hubspotusercontent-na1.net/hubfs/7228775/0323_FA_NeuralNetwork.jpg')`,
+        backgroundImage: `url(${require("../../assets/background.jpg")})`,
       };
     },
     style() {
@@ -247,11 +247,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
-.fondo
-  background: url("~/assets/background.jpg") no-repeat center center / cover
-
-
 .image-circle
   width: 120px
   height: 120px
