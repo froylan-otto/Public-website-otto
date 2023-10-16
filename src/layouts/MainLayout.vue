@@ -21,7 +21,10 @@
           />
           <q-route-tab :to="{ name: 'tourPage' }" replace label="About us" />
           <q-route-tab :to="{ name: 'tourPage' }" replace label="Register" />
-          <q-route-tab :to="{ name: 'loginPage' }" label="SIGN IN" />
+          <q-route-tab
+            @click="ridirectToOtherSite(url_admin_site)"
+            label="SIGN IN"
+          />
           <!-- <q-route-tab :to="{ name: 'signup' }" label="SIGN UP" /> -->
           <!-- <q-route-tab :to="{ name: 'registration' }" label="REGISTRATION" /> -->
         </q-tabs>
@@ -44,9 +47,14 @@ export default defineComponent({
 
     return {
       tab: ref("home"),
+      url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
     };
   },
-  methods: {},
+  methods: {
+    ridirectToOtherSite(url) {
+      window.location.href = url;
+    },
+  },
 });
 </script>
 <style>
