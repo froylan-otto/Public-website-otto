@@ -32,3 +32,4 @@ yarn-error.log*
 # local .env files
 .quasar.env.json
 .env
+quasar.extensions.json

@@ -19,7 +19,10 @@
             name="home"
             label="Home"
           />
-          <q-route-tab :to="{ name: 'tourPage' }" replace label="About us" />
+          <q-route-tab
+            @click="ridirectToOtherSite('http://dev.ottomate.me/contact')"
+            label="Contact us"
+          />
           <q-route-tab :to="{ name: 'tourPage' }" replace label="Register" />
           <q-route-tab
             @click="ridirectToOtherSite(url_admin_site)"
