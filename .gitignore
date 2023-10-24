@@ -33,3 +33,6 @@ yarn-error.log*
 .quasar.env.json
 .env
 quasar.extensions.json
+
+.quasar.env.json
+y

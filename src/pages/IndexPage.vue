@@ -8,10 +8,13 @@
             v-bind:style="heroImage"
           >
             <h3 class="text-white text-center">
-              A Data Reporting & Analytics infrastructure systems and platform
-              for the music industry
+              <span class="text-h4 q-mx-xl">
+                A Data Reporting & Analytics infrastructure systems and platform
+                for the music industry
+              </span>
+
               <br />
-              <div class="text-grey-7 text-h6 q-ml-xl q-mb-md">
+              <div class="text-grey-7 text-h5 q-ml-xl q-mb-md q-mt-md">
                 The tool focused on the music industry
               </div>
               <br />
@@ -19,25 +22,29 @@
                 type="a"
                 href=""
                 size="lg"
-                color="primary"
+                color="secondary"
                 label="GET IT"
+                class="text-black"
               />
             </h3>
           </div>
         </div>
-        <div class="row" style="background-color: #e3f6f5 !important">
+        <div
+          class="row q-mt-xl q-mb-xl"
+          style="background-color: #e3f6f5 !important"
+        >
           <div
             class="col-md-3 col-lg-3 col-xs-12 col-sm-12"
             style="background-color: #e3f6f5 !important"
           >
             <q-card
-              class="q-pa-sm flex flex-center text-center box-shadow"
+              class="q-pa-sm flex flex-center text-center"
               style="margin: 40px"
             >
               <q-card-section>
                 <div class="content-circle-imagen">
                   <img
-                    style="width: 150px"
+                    style="width: 100%"
                     src="~/assets/imagesHome/uploadFile.svg"
                     class="image-circle"
                   />
@@ -49,13 +56,13 @@
           </div>
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
             <q-card
-              class="q-pa-sm flex flex-center text-center box-shadow"
+              class="q-pa-sm flex flex-center text-center"
               style="margin: 40px"
             >
               <q-card-section>
                 <div class="content-circle-imagen">
                   <img
-                    style="width: 150px"
+                    style="width: 100%"
                     src="~/assets/imagesHome/processFile.svg"
                     class="image-circle"
                   />
@@ -67,13 +74,13 @@
           </div>
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
             <q-card
-              class="q-pa-sm flex flex-center text-center box-shadow"
+              class="q-pa-sm flex flex-center text-center"
               style="margin: 40px"
             >
               <q-card-section>
                 <div class="content-circle-imagen">
                   <img
-                    style="width: 150px"
+                    style="width: 100%"
                     src="~/assets/imagesHome/getReport.svg"
                     class="image-circle"
                   />
@@ -85,14 +92,14 @@
           </div>
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
             <q-card
-              class="q-pa-sm flex flex-center text-center box-shadow"
+              class="q-pa-sm flex flex-center text-center"
               style="margin: 40px"
             >
               <q-card-section>
                 <div class="content-circle-imagen">
                   <img
-                    style="width: 150px"
-                    src="~/assets/imagesHome/genStatement.svg"
+                    style="width: 100%"
+                    src="~/assets/imagesHome/generateStatement.svg"
                     class="image-circle"
                   />
                 </div>
@@ -102,11 +109,11 @@
             </q-card>
           </div>
         </div>
-        <div id="id_services">
+        <div id="id_services" style="background-color: #fff !important">
           <div class="q-pa-xl">
             <div class="row q-col-gutter-sm q-my-xl">
               <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center">
-                <div class="text-h4 text-bold text-light-blue-14">
+                <div class="text-h4 text-bold text-light-blue-14 q-mb-xl">
                   Dashboard
                 </div>
                 <label>Feature 1</label>
@@ -119,14 +126,16 @@
               <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                 <q-img
                   src="~/assets/imagesHome/homeDashboard.png"
-                  style="width: 100%; border-radius: 5px"
+                  style="width: 80%; border-radius: 5px"
                 ></q-img>
               </div>
             </div>
 
             <div class="row q-col-gutter-sm q-mt-lg">
               <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center">
-                <div class="text-h4 text-bold text-light-blue-14">Files</div>
+                <div class="text-h4 text-bold text-light-blue-14 q-mb-xl">
+                  Files
+                </div>
                 <label>Feature 1</label>
                 <br />
                 <label>Feature 2</label>
@@ -137,7 +146,7 @@
               <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                 <q-img
                   src="~/assets/imagesHome/homeDashboard.png"
-                  style="width: 100%; border-radius: 5px"
+                  style="width: 80%; border-radius: 5px"
                 ></q-img>
               </div>
             </div>
@@ -163,7 +172,7 @@
                 <q-card>
                   <q-card-section
                     class="text-white"
-                    style="background: #272643"
+                    style="background: #0d2031"
                   >
                     <div class="text-h6 text-center">Basic Plan: Cat</div>
                   </q-card-section>
@@ -183,7 +192,7 @@
                       <q-item> Feature 3 </q-item>
                     </q-list>
                   </q-card-section>
-                  <q-card-section class="q-pa-none" style="color: #272643">
+                  <q-card-section class="q-pa-none" style="color: #0d2031">
                     <div class="text-center">
                       <span class="text-h2 text-center">$0</span>/mo
                     </div>
@@ -193,7 +202,7 @@
                       <q-btn
                         size="md"
                         class="full-width q-pa-xs"
-                        style="background: #272643; color: white"
+                        style="background: #0d2031; color: white"
                         label="Choose Plan"
                       />
                       <br />
@@ -205,7 +214,7 @@
                 <q-card>
                   <q-card-section
                     class="text-white"
-                    style="background: #272643"
+                    style="background: #0d2031"
                   >
                     <div class="text-h6 text-center">Mid Plan: Chita</div>
                   </q-card-section>
@@ -225,7 +234,7 @@
                       <q-item> Feature 3 </q-item>
                     </q-list>
                   </q-card-section>
-                  <q-card-section class="q-pa-none" style="color: #272643">
+                  <q-card-section class="q-pa-none" style="color: #0d2031">
                     <div class="text-center">
                       <span class="text-h2 text-center">$0</span>/mo
                     </div>
@@ -235,7 +244,7 @@
                       <q-btn
                         size="md"
                         class="full-width q-pa-xs"
-                        style="background: #272643; color: white"
+                        style="background: #0d2031; color: white"
                         label="Choose Plan"
                       />
                       <br />
@@ -247,7 +256,7 @@
                 <q-card>
                   <q-card-section
                     class="text-white q-pa-md"
-                    style="background: #272643"
+                    style="background: #0d2031"
                   >
                     <div class="text-h6 text-center">Top Plan: Tiger</div>
                   </q-card-section>
@@ -267,7 +276,7 @@
                       <q-item> Feature 3 </q-item>
                     </q-list>
                   </q-card-section>
-                  <q-card-section class="q-pa-none" style="color: #272643">
+                  <q-card-section class="q-pa-none" style="color: #0d2031">
                     <div class="text-center">
                       <span class="text-h2 text-center">$0</span>/mo
                     </div>
@@ -277,7 +286,7 @@
                       <q-btn
                         size="md"
                         class="full-width q-pa-xs"
-                        :style="'background: #272643; color: white'"
+                        :style="'background: #0d2031; color: white'"
                         label="Choose Plan"
                       />
                       <br />
@@ -293,7 +302,7 @@
 
         <div
           class="col q-pt-md"
-          style="width: 100%; height: 200px; background: #272643"
+          style="width: 100%; height: 200px; background: #0d2031"
         >
           <div class="row">
             <div class="col-3 text-h5 text-white q-py-md q-pl-xl">
@@ -349,11 +358,11 @@ export default {
 
 
 .image-circle
-  width: 120px
-  height: 120px
+  width: 200px
+  height: 200px
   margin: auto
 .content-circle-imagen
-  background-color: $primary
+
   width: 200px
   height: 200px
   border-radius: 60% !important

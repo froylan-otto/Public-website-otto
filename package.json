@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js,.vue ./",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "dev": "set QENV=\"development\" && quasar dev",
+    "dev": "(set QENV=development) && quasar dev",
     "start": "./node_modules/.bin/react-scripts start",
     "prod": "QENV=production quasar build"
   },
@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "@quasar/app-vite": "^1.3.0",
-    "@quasar/quasar-app-extension-dotenv": "^1.1.0",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.1.0",

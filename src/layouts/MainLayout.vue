@@ -14,16 +14,19 @@
         </q-avatar>
         <q-tabs align="top" class="q-mr-xl" v-model="tab">
           <q-route-tab
-            :to="{ name: 'tourPage' }"
+            @click="ridirectToOtherSite(url_public_site)"
             replace
             name="home"
+            :to="{ name: 'home' }"
             label="Home"
           />
           <q-route-tab
-            @click="ridirectToOtherSite('http://dev.ottomate.me/contact')"
+            @click="ridirectToOtherSite(url_contact_form)"
+            :to="{ name: 'contact' }"
             label="Contact us"
           />
-          <q-route-tab :to="{ name: 'tourPage' }" replace label="Register" />
+
+          <!-- <q-route-tab :to="{ name: 'register' }" replace label="Register" /> -->
           <q-route-tab
             @click="ridirectToOtherSite(url_admin_site)"
             label="SIGN IN"
@@ -51,6 +54,8 @@ export default defineComponent({
     return {
       tab: ref("home"),
       url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
+      url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
+      url_public_site: process.env.GLOBAL_ENV.PUBLIC_SITE,
     };
   },
   methods: {
