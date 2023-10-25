@@ -20,7 +20,7 @@
               <br />
               <q-btn
                 type="a"
-                href=""
+                @click="ridirectToOtherSite(url_contact_form)"
                 size="lg"
                 color="secondary"
                 label="GET IT"
@@ -29,10 +29,14 @@
             </h3>
           </div>
         </div>
-        <div
-          class="row q-mt-xl q-mb-xl"
-          style="background-color: #e3f6f5 !important"
-        >
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+            <h5 class="text-center text-white">
+              <div class="text-h4 text-bold text-light-blue-14">Benefits</div>
+            </h5>
+          </div>
+        </div>
+        <div class="row q-mb-xl" style="background-color: #e3f6f5 !important">
           <div
             class="col-md-3 col-lg-3 col-xs-12 col-sm-12"
             style="background-color: #e3f6f5 !important"
@@ -109,10 +113,17 @@
             </q-card>
           </div>
         </div>
+        <div class="row" style="background-color: #fff !important">
+          <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+            <h5 class="text-center text-white">
+              <div class="text-h4 text-bold text-light-blue-14">Tools</div>
+            </h5>
+          </div>
+        </div>
         <div id="id_services" style="background-color: #fff !important">
           <div class="q-pa-xl">
             <div class="row q-col-gutter-sm q-my-xl">
-              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center">
+              <div class="col-md-4 col-lg-6 col-sm-4 col-xs-12 text-center">
                 <div class="text-h4 text-bold text-light-blue-14 q-mb-xl">
                   Dashboard
                 </div>
@@ -123,16 +134,16 @@
                 <label>Feature 3</label>
                 <br />
               </div>
-              <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+              <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
                 <q-img
                   src="~/assets/imagesHome/homeDashboard.png"
-                  style="width: 80%; border-radius: 5px"
+                  style="width: 100%; border-radius: 5px"
                 ></q-img>
               </div>
             </div>
 
             <div class="row q-col-gutter-sm q-mt-lg">
-              <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 text-center">
+              <div class="col-md-4 col-lg-6 col-sm-4 col-xs-12 text-center">
                 <div class="text-h4 text-bold text-light-blue-14 q-mb-xl">
                   Files
                 </div>
@@ -143,10 +154,10 @@
                 <label>Feature 3</label>
                 <br />
               </div>
-              <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+              <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
                 <q-img
                   src="~/assets/imagesHome/homeDashboard.png"
-                  style="width: 80%; border-radius: 5px"
+                  style="width: 100%; border-radius: 5px"
                 ></q-img>
               </div>
             </div>
@@ -159,16 +170,16 @@
                 <h5 class="text-center text-white">
                   <div class="text-h4 text-bold text-light-blue-14">Plans</div>
                   <br />
-                  <span class="text-center text-grey text-h6"
+                  <!-- <span class="text-center text-grey text-h6"
                     >Variety of benefits when uploading your file and
                     configuring your currency exchange rate in an agile way and
                     receiving the report via E-mail</span
-                  >
+                  > -->
                 </h5>
               </div>
             </div>
             <div class="row q-col-gutter-sm q-px-xl">
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 q-px-lg">
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
                 <q-card>
                   <q-card-section
                     class="text-white"
@@ -210,7 +221,7 @@
                   </q-card-section>
                 </q-card>
               </div>
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 q-px-lg">
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
                 <q-card>
                   <q-card-section
                     class="text-white"
@@ -252,7 +263,7 @@
                   </q-card-section>
                 </q-card>
               </div>
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 q-px-lg">
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
                 <q-card>
                   <q-card-section
                     class="text-white q-pa-md"
@@ -300,23 +311,24 @@
           </div>
         </div>
 
-        <div
-          class="col q-pt-md"
-          style="width: 100%; height: 200px; background: #0d2031"
-        >
-          <div class="row">
-            <div class="col-3 text-h5 text-white q-py-md q-pl-xl">
-              © ottomate ltd 2023
-            </div>
-            <div class="col-9 q-py-md text-white">
-              <div class="text-h6 text-white">PRODUCTS</div>
+        <div class="row" style="background: #0d2031; height: 250px">
+          <div class="col-5 text-h5 text-white q-py-md q-pl-xl">
+            © ottomate ltd 2023
 
-              <q-list class="text-white">
-                <q-item-label>OTTO-light</q-item-label>
-                <q-item-label>Otto as a Service</q-item-label>
-                <q-item-label>Ottito</q-item-label>
-              </q-list>
-            </div>
+            <br />
+            <span class="text-caption">
+              A Data Reporting & Analytics infrastructure systems and platform
+              for the music industry
+            </span>
+          </div>
+          <div class="col-7 q-py-md text-white">
+            <div class="text-h6 text-white">PRODUCTS</div>
+
+            <q-list class="text-white">
+              <q-item-label>OTTO-light</q-item-label>
+              <q-item-label>Otto as a Service</q-item-label>
+              <q-item-label>Ottito</q-item-label>
+            </q-list>
           </div>
         </div>
       </q-page>
@@ -325,10 +337,20 @@
 </template>
 
 <script>
-export default {
-  components: {},
-  data() {
-    return {};
+import { defineComponent, ref } from "vue";
+import { useQuasar } from "quasar";
+
+export default defineComponent({
+  name: "IndexPage",
+  setup() {
+    const $q = useQuasar();
+
+    return {
+      tab: ref("home"),
+      url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
+      url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
+      url_public_site: process.env.GLOBAL_ENV.PUBLIC_SITE,
+    };
   },
   computed: {
     heroImage() {
@@ -344,11 +366,19 @@ export default {
         textAlign: "center",
         boxShadow: "1px 1px 2px #e6e6e6",
         display: "inline-block",
+
+        url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
+        url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
+        url_public_site: process.env.GLOBAL_ENV.PUBLIC_SITE,
       };
     },
   },
-  methods: {},
-};
+  methods: {
+    ridirectToOtherSite(url) {
+      window.location.href = url;
+    },
+  },
+});
 </script>
 
 <style lang="sass" scoped>
