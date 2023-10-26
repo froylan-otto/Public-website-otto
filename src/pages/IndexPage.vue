@@ -32,11 +32,13 @@
             <q-card class="q-pa-sm flex flex-center text-center"
               style="margin: 40px; border-radius: 50%; height: 250px; width: 250px;">
               <q-card-section>
+
+                <div class="text-h6 ">Upload File</div>
                 <div class=" content-circle-imagen">
-                  <img style="width: 80%" src="~/assets/imagesHome/uploadFile.svg" class="image-circle" />
+                  <img style="width: 60%" src="~/assets/imagesHome/uploadFile.svg" class="image-circle" />
                 </div>
 
-                <div class="text-h6">Upload File</div>
+
               </q-card-section>
             </q-card>
           </div>
@@ -44,11 +46,12 @@
             <q-card class="q-pa-sm flex flex-center text-center"
               style="margin: 40px; border-radius: 50%; height: 250px; width: 250px;">
               <q-card-section>
+                <div class="text-h6">Process File</div>
                 <div class="content-circle-imagen">
                   <img style="width: 80%" src="~/assets/imagesHome/processFile.svg" class="image-circle" />
                 </div>
 
-                <div class="text-h6">Process File</div>
+
               </q-card-section>
             </q-card>
           </div>
@@ -56,11 +59,12 @@
             <q-card class="q-pa-sm flex flex-center text-center"
               style="margin: 40px; border-radius: 50%; height: 250px; width: 250px;">
               <q-card-section>
+                <div class="text-h6">Get Report</div>
                 <div class="content-circle-imagen">
                   <img style="width: 80%" src="~/assets/imagesHome/getReport.svg" class="image-circle" />
                 </div>
 
-                <div class="text-h6">Get Report</div>
+
               </q-card-section>
             </q-card>
           </div>
@@ -68,11 +72,12 @@
             <q-card class="q-pa-sm flex flex-center text-center"
               style="margin: 40px; border-radius: 50%; height: 250px; width: 250px;">
               <q-card-section>
+                <div class="text-h6">Generate Statements</div>
                 <div class="content-circle-imagen">
                   <img style="width: 80%" src="~/assets/imagesHome/generateStatement.svg" class="image-circle" />
                 </div>
 
-                <div class="text-h6">Generate Statements</div>
+
               </q-card-section>
             </q-card>
           </div>
@@ -143,6 +148,11 @@
                     <div class="text-h6 text-center">Basic Plan: Cat</div>
                   </q-card-section>
                   <q-card-section class="q-pa-md">
+
+                    <div class="content-circle-imagen">
+                      <img href="https://dev.ottito.io/" style="width: 150px; height: 150px;border-radius: 50%"
+                        src="~/assets/ottito.png" class="image-circle" />
+                    </div>
                     <q-list dense padding style="border-bottom: 1px solid lightgrey">
                       <q-item><span class="text-weight-bold">For small size companies</span></q-item>
                       <q-item> Feature 1 </q-item>
@@ -158,7 +168,7 @@
                   <q-card-section>
                     <div class="text-center q-px-lg">
                       <q-btn size="md" class="full-width q-pa-xs" style="background: #0d2031; color: white"
-                        label="Choose Plan" />
+                        label="Choose Plan" @click="ridirectToOtherSite('https://dev.ottito.io/')" />
                       <br />
                     </div>
                   </q-card-section>
@@ -290,6 +300,7 @@ export default defineComponent({
     ridirectToOtherSite(url) {
       window.location.href = url;
     },
+
   },
 });
 </script>
@@ -305,7 +316,6 @@ export default defineComponent({
   height: 200px
   margin: auto
 .content-circle-imagen
-
   width: 200px
   height: 200px
   border-radius: 60% !important
