@@ -43,7 +43,7 @@
           >
             <q-card
               class="q-pa-sm flex flex-center text-center"
-              style="margin: 40px"
+              style="margin: 40px; border-radius: 50%"
             >
               <q-card-section>
                 <div class="content-circle-imagen">
@@ -61,7 +61,7 @@
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
             <q-card
               class="q-pa-sm flex flex-center text-center"
-              style="margin: 40px"
+              style="margin: 40px; border-radius: 50%"
             >
               <q-card-section>
                 <div class="content-circle-imagen">
@@ -79,7 +79,7 @@
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
             <q-card
               class="q-pa-sm flex flex-center text-center"
-              style="margin: 40px"
+              style="margin: 40px; border-radius: 50%"
             >
               <q-card-section>
                 <div class="content-circle-imagen">
@@ -97,7 +97,7 @@
           <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
             <q-card
               class="q-pa-sm flex flex-center text-center"
-              style="margin: 40px"
+              style="margin: 40px; border-radius: 50%"
             >
               <q-card-section>
                 <div class="content-circle-imagen">
