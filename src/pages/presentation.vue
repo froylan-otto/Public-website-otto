@@ -8,7 +8,7 @@
             height="1000px"
             frameborder="3"
             style="background-color: #e3f6f5 !importan"
-            src="/src/assets/OTT-presDeck-03.pdf"
+            src="/OTT-presDeck-03.pdf"
           ></iframe>
         </div>
       </q-page>
