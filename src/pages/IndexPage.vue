@@ -3,7 +3,10 @@
     <q-page-container>
       <q-page>
         <div class="quote">
-          <div class="q-pt-xl q-px-xl full-width full-height flex flex-center fondo" v-bind:style="heroImage">
+          <div
+            class="q-pt-xl q-px-xl full-width full-height flex flex-center fondo"
+            v-bind:style="heroImage"
+          >
             <h3 class="text-white text-center">
               <span class="text-h4 q-mx-xl">
                 A Data Reporting & Analytics infrastructure systems and platform
@@ -11,15 +14,22 @@
               </span>
 
               <br />
-              <div class="text-grey-7 text-h5 q-ml-xl q-mb-md q-mt-md">
+              <div class="text-grey-6 text-h5 q-ml-xl q-mb-md q-mt-md">
                 The tool focused on the music industry
               </div>
               <br />
-              <q-btn type="a" @click="ridirectToOtherSite(url_contact_form)" size="lg" color="secondary" label="GET IT"
-                class="text-black" />
+              <q-btn
+                type="a"
+                @click="ridirectToOtherSite(url_contact_form)"
+                size="lg"
+                color="light-blue-14"
+                label="GET IT"
+                class="text-white"
+              />
             </h3>
           </div>
         </div>
+
         <div class="row">
           <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
             <h5 class="text-center text-white">
@@ -28,56 +38,97 @@
           </div>
         </div>
         <div class="row q-mb-xl" style="background-color: #e3f6f5 !important">
-          <div class="col-md-3 col-lg-3 col-xs-6 col-sm-12" style="background-color: #e3f6f5 !important">
-            <q-card class="q-pa-sm flex flex-center text-center"
-              style="margin: 40px; border-radius: 50%; height: 250px; width: 250px;">
+          <div
+            class="col-md-3 col-lg-3 col-xs-6 col-sm-12"
+            style="background-color: #e3f6f5 !important"
+          >
+            <q-card
+              class="q-pa-sm flex flex-center text-center"
+              style="
+                margin: 40px;
+                border-radius: 50%;
+                height: 250px;
+                width: 250px;
+              "
+            >
               <q-card-section>
-
-                <div class="text-h6 ">Upload File</div>
-                <div class=" content-circle-imagen">
-                  <img style="width: 60%" src="~/assets/imagesHome/uploadFile.svg" class="image-circle" />
+                <div class="text-h6 text-bold text-primary">Upload File</div>
+                <div class="content-circle-imagen">
+                  <img
+                    style="width: 60%"
+                    src="~/assets/imagesHome/uploadFile.svg"
+                    class="image-circle"
+                  />
                 </div>
-
-
               </q-card-section>
             </q-card>
           </div>
           <div class="col-md-3 col-lg-3 col-xs-6 col-sm-12">
-            <q-card class="q-pa-sm flex flex-center text-center"
-              style="margin: 40px; border-radius: 50%; height: 250px; width: 250px;">
+            <q-card
+              class="q-pa-sm flex flex-center text-center"
+              style="
+                margin: 40px;
+                border-radius: 50%;
+                height: 250px;
+                width: 250px;
+              "
+            >
               <q-card-section>
-                <div class="text-h6">Process File</div>
+                <div class="text-h6 text-bold text-primary">Process File</div>
                 <div class="content-circle-imagen">
-                  <img style="width: 80%" src="~/assets/imagesHome/processFile.svg" class="image-circle" />
+                  <img
+                    style="width: 80%"
+                    src="~/assets/imagesHome/processFile.svg"
+                    class="image-circle"
+                  />
                 </div>
-
-
               </q-card-section>
             </q-card>
           </div>
           <div class="col-md-3 col-lg-3 col-xs-6 col-sm-12">
-            <q-card class="q-pa-sm flex flex-center text-center"
-              style="margin: 40px; border-radius: 50%; height: 250px; width: 250px;">
+            <q-card
+              class="q-pa-sm flex flex-center text-center"
+              style="
+                margin: 40px;
+                border-radius: 50%;
+                height: 250px;
+                width: 250px;
+              "
+            >
               <q-card-section>
-                <div class="text-h6">Get Report</div>
+                <div class="text-h6 text-bold text-primary">Get Report</div>
                 <div class="content-circle-imagen">
-                  <img style="width: 80%" src="~/assets/imagesHome/getReport.svg" class="image-circle" />
+                  <img
+                    style="width: 80%"
+                    src="~/assets/imagesHome/getReport.svg"
+                    class="image-circle"
+                  />
                 </div>
-
-
               </q-card-section>
             </q-card>
           </div>
           <div class="col-md-3 col-lg-3 col-xs-6 col-sm-12">
-            <q-card class="q-pa-sm flex flex-center text-center"
-              style="margin: 40px; border-radius: 50%; height: 250px; width: 250px;">
+            <q-card
+              class="q-pa-sm flex flex-center text-center"
+              style="
+                margin: 40px;
+                border-radius: 50%;
+                height: 250px;
+                width: 250px;
+              "
+            >
               <q-card-section>
-                <div class="text-h6">Generate Statements</div>
-                <div class="content-circle-imagen">
-                  <img style="width: 80%" src="~/assets/imagesHome/generateStatement.svg" class="image-circle" />
+                <div class="text-h6 text-primary text-bold">
+                  Generate <br />
+                  Statements
                 </div>
-
-
+                <div class="content-circle-imagen">
+                  <img
+                    style="width: 73%"
+                    src="~/assets/imagesHome/generateStatement.svg"
+                    class="image-circle"
+                  />
+                </div>
               </q-card-section>
             </q-card>
           </div>
@@ -104,7 +155,10 @@
                 <br />
               </div>
               <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
-                <q-img src="~/assets/imagesHome/homeDashboard.png" style="width: 100%; border-radius: 5px"></q-img>
+                <q-img
+                  src="~/assets/imagesHome/homeDashboard.png"
+                  style="width: 100%; border-radius: 5px"
+                ></q-img>
               </div>
             </div>
 
@@ -121,7 +175,10 @@
                 <br />
               </div>
               <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
-                <q-img src="~/assets/imagesHome/homeDashboard.png" style="width: 100%; border-radius: 5px"></q-img>
+                <q-img
+                  src="~/assets/imagesHome/homeDashboard.png"
+                  style="width: 100%; border-radius: 5px"
+                ></q-img>
               </div>
             </div>
           </div>
@@ -144,17 +201,31 @@
             <div class="row q-col-gutter-sm q-px-xl">
               <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
                 <q-card>
-                  <q-card-section class="text-white" style="background: #0d2031">
+                  <q-card-section
+                    class="text-white"
+                    style="background: #0d2031"
+                  >
                     <div class="text-h6 text-center">Basic Plan: Cat</div>
                   </q-card-section>
                   <q-card-section class="q-pa-md">
-
                     <div class="content-circle-imagen">
-                      <img href="https://dev.ottito.io/" style="width: 150px; height: 150px;border-radius: 50%"
-                        src="~/assets/ottito.png" class="image-circle" />
+                      <img
+                        href="https://dev.ottito.io/"
+                        style="width: 150px; height: 150px; border-radius: 50%"
+                        src="~/assets/ottito.png"
+                        class="image-circle"
+                      />
                     </div>
-                    <q-list dense padding style="border-bottom: 1px solid lightgrey">
-                      <q-item><span class="text-weight-bold">For small size companies</span></q-item>
+                    <q-list
+                      dense
+                      padding
+                      style="border-bottom: 1px solid lightgrey"
+                    >
+                      <q-item
+                        ><span class="text-weight-bold"
+                          >For small size companies</span
+                        ></q-item
+                      >
                       <q-item> Feature 1 </q-item>
                       <q-item> Feature 2 </q-item>
                       <q-item> Feature 3 </q-item>
@@ -167,8 +238,13 @@
                   </q-card-section>
                   <q-card-section>
                     <div class="text-center q-px-lg">
-                      <q-btn size="md" class="full-width q-pa-xs" style="background: #0d2031; color: white"
-                        label="Choose Plan" @click="ridirectToOtherSite('https://dev.ottito.io/')" />
+                      <q-btn
+                        size="md"
+                        class="full-width q-pa-xs"
+                        style="background: #0d2031; color: white"
+                        label="Choose Plan"
+                        @click="ridirectToOtherSite('https://dev.ottito.io/')"
+                      />
                       <br />
                     </div>
                   </q-card-section>
@@ -176,12 +252,23 @@
               </div>
               <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
                 <q-card>
-                  <q-card-section class="text-white" style="background: #0d2031">
+                  <q-card-section
+                    class="text-white"
+                    style="background: #0d2031"
+                  >
                     <div class="text-h6 text-center">Mid Plan: Chita</div>
                   </q-card-section>
                   <q-card-section class="q-pa-md">
-                    <q-list dense padding style="border-bottom: 1px solid lightgrey">
-                      <q-item><span class="text-weight-bold">For medium companies</span></q-item>
+                    <q-list
+                      dense
+                      padding
+                      style="border-bottom: 1px solid lightgrey"
+                    >
+                      <q-item
+                        ><span class="text-weight-bold"
+                          >For medium companies</span
+                        ></q-item
+                      >
                       <q-item> Feature 1 </q-item>
                       <q-item> Feature 2 </q-item>
                       <q-item> Feature 3 </q-item>
@@ -194,8 +281,12 @@
                   </q-card-section>
                   <q-card-section>
                     <div class="text-center q-px-lg">
-                      <q-btn size="md" class="full-width q-pa-xs" style="background: #0d2031; color: white"
-                        label="Choose Plan" />
+                      <q-btn
+                        size="md"
+                        class="full-width q-pa-xs"
+                        style="background: #0d2031; color: white"
+                        label="Choose Plan"
+                      />
                       <br />
                     </div>
                   </q-card-section>
@@ -203,12 +294,23 @@
               </div>
               <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
                 <q-card>
-                  <q-card-section class="text-white q-pa-md" style="background: #0d2031">
+                  <q-card-section
+                    class="text-white q-pa-md"
+                    style="background: #0d2031"
+                  >
                     <div class="text-h6 text-center">Top Plan: Tiger</div>
                   </q-card-section>
                   <q-card-section class="q-pa-md">
-                    <q-list dense padding style="border-bottom: 1px solid lightgrey">
-                      <q-item><span class="text-weight-bold">For average companies</span></q-item>
+                    <q-list
+                      dense
+                      padding
+                      style="border-bottom: 1px solid lightgrey"
+                    >
+                      <q-item
+                        ><span class="text-weight-bold"
+                          >For average companies</span
+                        ></q-item
+                      >
                       <q-item> Feature 1 </q-item>
                       <q-item> Feature 2 </q-item>
                       <q-item> Feature 3 </q-item>
@@ -221,8 +323,12 @@
                   </q-card-section>
                   <q-card-section>
                     <div class="text-center q-px-lg">
-                      <q-btn size="md" class="full-width q-pa-xs" :style="'background: #0d2031; color: white'"
-                        label="Choose Plan" />
+                      <q-btn
+                        size="md"
+                        class="full-width q-pa-xs"
+                        :style="'background: #0d2031; color: white'"
+                        label="Choose Plan"
+                      />
                       <br />
                     </div>
                   </q-card-section>
@@ -234,7 +340,7 @@
           </div>
         </div>
 
-        <div class="row" style="background: #0d2031;">
+        <div class="row" style="background: #0d2031">
           <div class="col-12 text-center text-h5 text-white q-py-md q-pl-xl">
             © ottomate ltd 2023
 
@@ -300,7 +406,6 @@ export default defineComponent({
     ridirectToOtherSite(url) {
       window.location.href = url;
     },
-
   },
 });
 </script>

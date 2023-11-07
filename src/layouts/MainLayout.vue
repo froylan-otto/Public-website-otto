@@ -23,7 +23,13 @@
           <q-route-tab
             @click="ridirectToOtherSite(url_contact_form)"
             :to="{ name: 'contact' }"
+            replace
             label="Contact us"
+          />
+          <q-route-tab
+            @click="ridirectToOtherSite(url_presentation)"
+            :to="{ name: 'presentation' }"
+            label="Presentation"
           />
 
           <!-- <q-route-tab :to="{ name: 'register' }" replace label="Register" /> -->
@@ -53,6 +59,7 @@ export default defineComponent({
 
     return {
       tab: ref("home"),
+      url_presentation: process.env.GLOBAL_ENV.URL_PRESENTATION,
       url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
       url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
       url_public_site: process.env.GLOBAL_ENV.PUBLIC_SITE,
