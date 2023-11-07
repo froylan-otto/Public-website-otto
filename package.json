@@ -1,8 +1,8 @@
 {
   "name": "public-website-otto",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Otto Website App",
+  "description": "A Data Reporting and Analytics plataform for the music industry",
+  "productName": "OTTO Website App",
   "author": "Froylán M. Wbario Martínez <115089527+froylan-otto@users.noreply.github.com>",
   "private": true,
   "scripts": {
