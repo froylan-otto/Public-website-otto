@@ -33,110 +33,31 @@
         <div class="row">
           <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
             <h5 class="text-center text-white">
-              <div class="text-h4 text-bold text-light-blue-14">Benefits</div>
+              <div class="text-h4 text-bold text-primary">Benefits</div>
             </h5>
           </div>
         </div>
+        <!-- start card information -->
         <div class="row q-mb-xl" style="background-color: #e3f6f5 !important">
-          <div
-            class="col-md-3 col-lg-3 col-xs-6 col-sm-12"
-            style="background-color: #e3f6f5 !important"
-          >
-            <q-card
-              class="q-pa-sm flex flex-center text-center"
-              style="
-                margin: 40px;
-                border-radius: 50%;
-                height: 250px;
-                width: 250px;
-              "
-            >
-              <q-card-section>
-                <div class="text-h6 text-bold text-primary">Upload File</div>
-                <div class="content-circle-imagen">
-                  <img
-                    style="width: 60%"
-                    src="~/assets/imagesHome/uploadFile.svg"
-                    class="image-circle"
-                  />
-                </div>
-              </q-card-section>
-            </q-card>
-          </div>
-          <div class="col-md-3 col-lg-3 col-xs-6 col-sm-12">
-            <q-card
-              class="q-pa-sm flex flex-center text-center"
-              style="
-                margin: 40px;
-                border-radius: 50%;
-                height: 250px;
-                width: 250px;
-              "
-            >
-              <q-card-section>
-                <div class="text-h6 text-bold text-primary">Process File</div>
-                <div class="content-circle-imagen">
-                  <img
-                    style="width: 80%"
-                    src="~/assets/imagesHome/processFile.svg"
-                    class="image-circle"
-                  />
-                </div>
-              </q-card-section>
-            </q-card>
-          </div>
-          <div class="col-md-3 col-lg-3 col-xs-6 col-sm-12">
-            <q-card
-              class="q-pa-sm flex flex-center text-center"
-              style="
-                margin: 40px;
-                border-radius: 50%;
-                height: 250px;
-                width: 250px;
-              "
-            >
-              <q-card-section>
-                <div class="text-h6 text-bold text-primary">Get Report</div>
-                <div class="content-circle-imagen">
-                  <img
-                    style="width: 80%"
-                    src="~/assets/imagesHome/getReport.svg"
-                    class="image-circle"
-                  />
-                </div>
-              </q-card-section>
-            </q-card>
-          </div>
-          <div class="col-md-3 col-lg-3 col-xs-6 col-sm-12">
-            <q-card
-              class="q-pa-sm flex flex-center text-center"
-              style="
-                margin: 40px;
-                border-radius: 50%;
-                height: 250px;
-                width: 250px;
-              "
-            >
-              <q-card-section>
-                <div class="text-h6 text-primary text-bold">
-                  Generate <br />
-                  Statements
-                </div>
-                <div class="content-circle-imagen">
-                  <img
-                    style="width: 73%"
-                    src="~/assets/imagesHome/generateStatement.svg"
-                    class="image-circle"
-                  />
-                </div>
-              </q-card-section>
-            </q-card>
-          </div>
+          <card-information :Title="'Upload file'" />
+          <card-information
+            :Title="'Process File'"
+            :image="'/CardInformation/processFile.svg'"
+          />
+          <card-information
+            :Title="'Get Report'"
+            :image="'/CardInformation/getReport.svg'"
+          />
+          <card-information
+            :Title="'Get Report'"
+            :image="'/CardInformation/generateStatement.svg'"
+          />
         </div>
+        <!-- End cards information -->
         <div class="row" style="background-color: #fff !important">
           <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
             <h5 class="text-center text-white">
-              <div class="text-h4 text-bold text-light-blue-14">Tools</div>
+              <div class="text-h4 text-bold text-primary">Tools</div>
             </h5>
           </div>
         </div>
@@ -188,155 +109,17 @@
             <div class="row">
               <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
                 <h5 class="text-center text-white">
-                  <div class="text-h4 text-bold text-light-blue-14">Plans</div>
+                  <div class="text-h4 text-bold text-primary">Plans</div>
                   <br />
-                  <!-- <span class="text-center text-grey text-h6"
-                    >Variety of benefits when uploading your file and
-                    configuring your currency exchange rate in an agile way and
-                    receiving the report via E-mail</span
-                  > -->
                 </h5>
               </div>
             </div>
-            <div class="row q-col-gutter-sm q-px-xl">
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
-                <q-card>
-                  <q-card-section
-                    class="text-white"
-                    style="background: #0d2031"
-                  >
-                    <div class="text-h6 text-center">Basic Plan: Cat</div>
-                  </q-card-section>
-                  <q-card-section class="q-pa-md">
-                    <div class="content-circle-imagen">
-                      <img
-                        href="https://dev.ottito.io/"
-                        style="width: 150px; height: 150px; border-radius: 50%"
-                        src="~/assets/ottito.png"
-                        class="image-circle"
-                      />
-                    </div>
-                    <q-list
-                      dense
-                      padding
-                      style="border-bottom: 1px solid lightgrey"
-                    >
-                      <q-item
-                        ><span class="text-weight-bold"
-                          >For small size companies</span
-                        ></q-item
-                      >
-                      <q-item> Feature 1 </q-item>
-                      <q-item> Feature 2 </q-item>
-                      <q-item> Feature 3 </q-item>
-                    </q-list>
-                  </q-card-section>
-                  <q-card-section class="q-pa-none" style="color: #0d2031">
-                    <div class="text-center">
-                      <span class="text-h2 text-center">$0</span>/mo
-                    </div>
-                  </q-card-section>
-                  <q-card-section>
-                    <div class="text-center q-px-lg">
-                      <q-btn
-                        size="md"
-                        class="full-width q-pa-xs"
-                        style="background: #0d2031; color: white"
-                        label="Choose Plan"
-                        @click="ridirectToOtherSite('https://dev.ottito.io/')"
-                      />
-                      <br />
-                    </div>
-                  </q-card-section>
-                </q-card>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
-                <q-card>
-                  <q-card-section
-                    class="text-white"
-                    style="background: #0d2031"
-                  >
-                    <div class="text-h6 text-center">Mid Plan: Chita</div>
-                  </q-card-section>
-                  <q-card-section class="q-pa-md">
-                    <q-list
-                      dense
-                      padding
-                      style="border-bottom: 1px solid lightgrey"
-                    >
-                      <q-item
-                        ><span class="text-weight-bold"
-                          >For medium companies</span
-                        ></q-item
-                      >
-                      <q-item> Feature 1 </q-item>
-                      <q-item> Feature 2 </q-item>
-                      <q-item> Feature 3 </q-item>
-                    </q-list>
-                  </q-card-section>
-                  <q-card-section class="q-pa-none" style="color: #0d2031">
-                    <div class="text-center">
-                      <span class="text-h2 text-center">$0</span>/mo
-                    </div>
-                  </q-card-section>
-                  <q-card-section>
-                    <div class="text-center q-px-lg">
-                      <q-btn
-                        size="md"
-                        class="full-width q-pa-xs"
-                        style="background: #0d2031; color: white"
-                        label="Choose Plan"
-                      />
-                      <br />
-                    </div>
-                  </q-card-section>
-                </q-card>
-              </div>
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
-                <q-card>
-                  <q-card-section
-                    class="text-white q-pa-md"
-                    style="background: #0d2031"
-                  >
-                    <div class="text-h6 text-center">Top Plan: Tiger</div>
-                  </q-card-section>
-                  <q-card-section class="q-pa-md">
-                    <q-list
-                      dense
-                      padding
-                      style="border-bottom: 1px solid lightgrey"
-                    >
-                      <q-item
-                        ><span class="text-weight-bold"
-                          >For average companies</span
-                        ></q-item
-                      >
-                      <q-item> Feature 1 </q-item>
-                      <q-item> Feature 2 </q-item>
-                      <q-item> Feature 3 </q-item>
-                    </q-list>
-                  </q-card-section>
-                  <q-card-section class="q-pa-none" style="color: #0d2031">
-                    <div class="text-center">
-                      <span class="text-h2 text-center">$0</span>/mo
-                    </div>
-                  </q-card-section>
-                  <q-card-section>
-                    <div class="text-center q-px-lg">
-                      <q-btn
-                        size="md"
-                        class="full-width q-pa-xs"
-                        :style="'background: #0d2031; color: white'"
-                        label="Choose Plan"
-                      />
-                      <br />
-                    </div>
-                  </q-card-section>
-                </q-card>
-              </div>
+
+            <div class="flex justify-center">
+              <card-plan :image="'logo-ottito.svg'" />
+              <card-plan />
+              <card-plan :dark="true" />
             </div>
-            <br />
-            <br />
           </div>
         </div>
 
@@ -368,9 +151,12 @@
 <script>
 import { defineComponent, ref } from "vue";
 import { useQuasar } from "quasar";
+import CardPlan from "src/components/CardPlan.vue";
+import CardInformation from "src/components/CardInformation.vue";
 
 export default defineComponent({
   name: "IndexPage",
+  components: { CardPlan, CardInformation },
   setup() {
     const $q = useQuasar();
 
