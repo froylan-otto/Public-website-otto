@@ -63,45 +63,17 @@
         </div>
         <div id="id_services" style="background-color: #fff !important">
           <div class="q-pa-xl">
-            <div class="row q-col-gutter-sm q-my-xl">
-              <div class="col-md-4 col-lg-6 col-sm-4 col-xs-12 text-center">
-                <div class="text-h4 text-bold text-light-blue-14 q-mb-xl">
-                  Dashboard
-                </div>
-                <label>Feature 1</label>
-                <br />
-                <label>Feature 2</label>
-                <br />
-                <label>Feature 3</label>
-                <br />
-              </div>
-              <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
-                <q-img
-                  src="~/assets/imagesHome/homeDashboard.png"
-                  style="width: 100%; border-radius: 5px"
-                ></q-img>
-              </div>
-            </div>
-
-            <div class="row q-col-gutter-sm q-mt-lg">
-              <div class="col-md-4 col-lg-6 col-sm-4 col-xs-12 text-center">
-                <div class="text-h4 text-bold text-light-blue-14 q-mb-xl">
-                  Files
-                </div>
-                <label>Feature 1</label>
-                <br />
-                <label>Feature 2</label>
-                <br />
-                <label>Feature 3</label>
-                <br />
-              </div>
-              <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
-                <q-img
-                  src="~/assets/imagesHome/homeDashboard.png"
-                  style="width: 100%; border-radius: 5px"
-                ></q-img>
-              </div>
-            </div>
+            <tools-info
+              :image="'/Tools/homeDashboard.png'"
+              :title="'Dashboard'"
+              :imageFirst="false"
+            />
+            <tools-info :title="'Files'" :imageFirst="true" />
+            <tools-info
+              :image="'/Tools/homeDashboard.png'"
+              :title="'Settings'"
+              :imageFirst="false"
+            />
           </div>
         </div>
         <div class="pricing" id="id_pricing">
@@ -153,10 +125,11 @@ import { defineComponent, ref } from "vue";
 import { useQuasar } from "quasar";
 import CardPlan from "src/components/CardPlan.vue";
 import CardInformation from "src/components/CardInformation.vue";
+import ToolsInfo from "src/components/ToolsInfo.vue";
 
 export default defineComponent({
   name: "IndexPage",
-  components: { CardPlan, CardInformation },
+  components: { CardPlan, CardInformation, ToolsInfo },
   setup() {
     const $q = useQuasar();
 
