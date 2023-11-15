@@ -2,6 +2,7 @@
   <q-card
     class="card-plan q-ma-xl shadow-6"
     :class="[dark ? 'bg-primary' : 'bg-white']"
+    style="width: 80%"
   >
     <q-card-section class="text-center">
       <q-avatar size="100px" class="q-mt-md bg-primary">
@@ -57,6 +58,52 @@
     </q-card-section>
   </q-card>
 </template>
+
+<!--
+  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
+    <q-card>
+      <q-card-section
+        class="text-white q-pa-md"
+        style="background: #0d2031"
+      >
+        <div class="text-h6 text-center">Top Plan: Tiger</div>
+      </q-card-section>
+      <q-card-section class="q-pa-md">
+        <q-list
+          dense
+          padding
+          style="border-bottom: 1px solid lightgrey"
+        >
+          <q-item
+            ><span class="text-weight-bold"
+              >For average companies</span
+            ></q-item
+          >
+          <q-item> Feature 1 </q-item>
+          <q-item> Feature 2 </q-item>
+          <q-item> Feature 3 </q-item>
+        </q-list>
+      </q-card-section>
+      <q-card-section class="q-pa-none" style="color: #0d2031">
+        <div class="text-center">
+          <span class="text-h2 text-center">$0</span>/mo
+        </div>
+      </q-card-section>
+      <q-card-section>
+        <div class="text-center q-px-lg">
+          <q-btn
+            size="md"
+            class="full-width q-pa-xs"
+            :style="'background: #0d2031; color: white'"
+            label="Choose Plan"
+          />
+          <br />
+        </div>
+      </q-card-section>
+    </q-card>
+  </div>
+-->
+
 <script>
 export default {
   props: {

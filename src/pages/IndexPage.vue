@@ -87,11 +87,28 @@
               </div>
             </div>
 
-            <div class="flex justify-center">
+            <div class="row flex justify-center">
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
+                <card-plan
+                  :image="'logo-ottito.svg'"
+                  class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg"
+                />
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
+                <card-plan :image="'logo-ottito.svg'" />
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
+                <card-plan :image="'logo-ottito.svg'" />
+              </div>
+            </div>
+
+            <!-- <div class="flex justify-center">
               <card-plan :image="'logo-ottito.svg'" />
               <card-plan />
               <card-plan :dark="true" />
-            </div>
+            </div> -->
           </div>
         </div>
 
