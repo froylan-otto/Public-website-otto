@@ -1,20 +1,10 @@
 <template>
-  <div
-    class="col-md-3 col-lg-3 col-xs-6 col-sm-12"
-    style="background-color: #e3f6f5 !important"
-  >
-    <q-card
-      class="q-pa-sm flex flex-center text-center bg-primary"
-      style="margin: 40px; border-radius: 50%; height: 250px; width: 250px"
-    >
-      <q-card-section>
-        <div class="text-h6 text-bold text-white">{{ Title }}</div>
-        <div class="content-circle-imagen">
-          <img style="width: 60%" :src="image" class="image-circle" />
-        </div>
-      </q-card-section>
-    </q-card>
-  </div>
+  <q-card class="bg-primary q-my-xl">
+    <q-card-section class="text-white text-bold">
+      <q-icon :name="icon" size="sm" color="white" />
+      {{ Title }}
+    </q-card-section>
+  </q-card>
 </template>
 <script>
 export default {
@@ -28,7 +18,16 @@ export default {
       type: String,
       default: "Title",
     },
+    icon: {
+      type: String,
+      default: "fas fa-check",
+    },
   },
   setup() {},
 };
 </script>
+<style scoped>
+.my-card {
+  width: 100%;
+}
+</style>

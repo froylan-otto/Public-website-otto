@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf" style="background: #e3f6f5">
+  <q-layout view="lHh Lpr lFf">
     <q-header
       class="no-shadow heading bg-primary q-py-lg"
       bordered

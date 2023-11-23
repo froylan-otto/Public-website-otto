@@ -2,19 +2,19 @@
   <q-layout view="lHh lpr lFf">
     <q-page-container>
       <q-page>
-        <div class="quote">
+        <div class="quote fondo-container">
           <div
-            class="q-pt-xl q-px-xl full-width full-height flex flex-center fondo"
+            class="q-py-xl q-px-xl full-width full-height flex flex-center fondo"
             v-bind:style="heroImage"
           >
             <h3 class="text-white text-center">
-              <span class="text-h4 q-mx-xl">
+              <span class="text-h5 q-mx-xl">
                 A Data Reporting & Analytics infrastructure systems and platform
                 for the music industry
               </span>
 
               <br />
-              <div class="text-grey-6 text-h5 q-ml-xl q-mb-md q-mt-md">
+              <div class="text-grey-6 text-h6 q-ml-xl q-mb-md q-mt-md">
                 The tool focused on the music industry
               </div>
               <br />
@@ -24,84 +24,106 @@
                 size="lg"
                 color="light-blue-14"
                 label="GET IT"
-                class="text-white"
+                class="text-white q-mb-xl"
+                rounded
               />
             </h3>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-            <h5 class="text-center text-white">
-              <div class="text-h4 text-bold text-primary">Benefits</div>
-            </h5>
+        <div class="bg-white q-mb-xl">
+          <div class="">
+            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+              <h5 class="text-center text-white">
+                <div class="text-h5 text-bold text-primary">BENEFITS</div>
+              </h5>
+            </div>
           </div>
-        </div>
-        <!-- start card information -->
-        <div class="row q-mb-xl" style="background-color: #e3f6f5 !important">
-          <card-information :Title="'Upload file'" />
-          <card-information
-            :Title="'Process File'"
-            :image="'/CardInformation/processFile.svg'"
-          />
-          <card-information
-            :Title="'Get Report'"
-            :image="'/CardInformation/getReport.svg'"
-          />
-          <card-information
-            :Title="'Get Report'"
-            :image="'/CardInformation/generateStatement.svg'"
-          />
+          <!-- start card information -->
+          <div class="flex col justify-evenly" style="widht: 100%">
+            <card-information :Title="'Upload file'" :icon="'fas fa-check'" />
+            <card-information :Title="'Process File'" :icon="'fas fa-file'" />
+            <card-information :Title="'Get Report'" :icon="'fas fa-file-pen'" />
+            <card-information :Title="'Process File'" />
+          </div>
         </div>
         <!-- End cards information -->
-        <div class="row" style="background-color: #fff !important">
-          <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-            <h5 class="text-center text-white">
-              <div class="text-h4 text-bold text-primary">Tools</div>
-            </h5>
+        <q-separator />
+        <!-- start cards expertise -->
+        <div class="text-center q-my-xl" style="margin: 120px 0px">
+          <h5 class="text-bold text-primary" style="margin-bottom: 0px">
+            OUR KEY EXPERTISE: WHY US AND WHY NOW
+          </h5>
+          <h6 class="text-grey-14 q-mt-lg q-mb-xl">
+            <span :class="textKey"> OTTO</span> has the foundation,
+            <span :class="textKey">architecture and logic allowing </span> to
+            build upon th <span :class="textKey">tools</span> and products
+            saving substantial time, effort and money.
+          </h6>
+          <!-- sub cards -->
+          <div class="flex justify-evenly q-my-xl">
+            <card-expertise
+              v-for="info in info_expertise"
+              :key="info"
+              :title="info.title"
+              :items="info.items"
+            />
           </div>
         </div>
-        <div id="id_services" style="background-color: #fff !important">
-          <div class="q-pa-xl">
-            <tools-info
-              :image="'/Tools/homeDashboard.png'"
-              :title="'Dashboard'"
-              :imageFirst="false"
-            />
-            <tools-info :title="'Files'" :imageFirst="true" />
-            <tools-info
-              :image="'/Tools/homeDashboard.png'"
-              :title="'Settings'"
-              :imageFirst="false"
-            />
+        <!-- end cards expertise -->
+        <!-- start marker oportunity -->
+        <div class="text-center" style="margin: 120px 0px">
+          <h5 class="text-bold text-primary">
+            A MARKET OPPORTUNITY: SEEKING ARNERS OR BUYERS
+          </h5>
+          <q-img
+            class="q-my-xl"
+            src="~/assets/imagesHome/marker-opportunity.png"
+            style="width: 60%; border-radius: 15px"
+          ></q-img>
+        </div>
+        <!-- emd marker oportunity -->
+
+        <div style="background: #e3f6f5" class="q-py-xl">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+              <h5 class="text-center text-white">
+                <div class="text-h4 text-bold text-primary">TOOLS</div>
+              </h5>
+            </div>
+          </div>
+          <div id="id_services">
+            <div class="q-pa-xl">
+              <tools-info
+                :image="'/Tools/homeDashboard.png'"
+                :title="'Dashboard'"
+                :imageFirst="false"
+              />
+              <tools-info :title="'Files'" :imageFirst="true" />
+              <tools-info
+                :image="'/Tools/homeDashboard.png'"
+                :title="'Settings'"
+                :imageFirst="false"
+              />
+            </div>
           </div>
         </div>
         <div class="pricing" id="id_pricing">
-          <div class="" style="background-color: #e3f6f5 !important">
+          <div class="q-py-xl">
             <div class="row">
               <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
                 <h5 class="text-center text-white">
-                  <div class="text-h4 text-bold text-primary">Plans</div>
+                  <div class="text-h5 text-primary text-bold">PLANS</div>
                   <br />
                 </h5>
               </div>
             </div>
 
-            <div class="row flex justify-center">
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
-                <card-plan
-                  :image="'logo-ottito.svg'"
-                  class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg"
-                />
-              </div>
+            <div class="flex justify-evenly q-my-xl">
+              <card-plan :image="'otto-newlogo2013.png'" />
 
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
-                <card-plan :image="'logo-ottito.svg'" />
-              </div>
+              <card-plan :image="'otto-newlogo2013.png'" />
 
-              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 q-px-lg">
-                <card-plan :image="'logo-ottito.svg'" />
-              </div>
+              <card-plan :image="'otto-newlogo2013.png'" :dark="true" />
             </div>
 
             <!-- <div class="flex justify-center">
@@ -111,6 +133,31 @@
             </div> -->
           </div>
         </div>
+
+        <!-- start ABOUT US -->
+        <div class="text-center" style="margin: 120px 0px">
+          <h5 class="text-bold text-primary">ABOUT US</h5>
+          <div class="flex col">
+            <div style="width: 50%" class="text-h5 q-pa-xl flex justify-center">
+              <div style="width: 80%" class="text-justify text-grey-8">
+                During the past 10 YEARS, OTTO has been in the forefront of
+                technical development for the indies having designed, built and
+                managed a bespoke data and financial reporting system and a full
+                CRM system for Merlin Network, the global rights agency serving
+                over 20% of the music industry, processing OVER $2BN in
+                revenues.
+              </div>
+            </div>
+            <div style="width: 50%">
+              <q-img
+                class="q-my-xl"
+                src="~/assets/imagesHome/ABOUT_US.png"
+                style="width: 80%; border-radius: 15px"
+              ></q-img>
+            </div>
+          </div>
+        </div>
+        <!-- emd ABOUT US -->
 
         <div class="row" style="background: #0d2031">
           <div class="col-12 text-center text-h5 text-white q-py-md q-pl-xl">
@@ -143,15 +190,42 @@ import { useQuasar } from "quasar";
 import CardPlan from "src/components/CardPlan.vue";
 import CardInformation from "src/components/CardInformation.vue";
 import ToolsInfo from "src/components/ToolsInfo.vue";
+import CardExpertise from "src/components/CardExpertise.vue";
 
 export default defineComponent({
   name: "IndexPage",
-  components: { CardPlan, CardInformation, ToolsInfo },
+  components: { CardPlan, CardInformation, ToolsInfo, CardExpertise },
   setup() {
-    const $q = useQuasar();
-
+    const info_expertise = ref([
+      {
+        title: "THOROUGH KNOWLEDGE OF THE DIGITAL INDUSTRY:",
+        items: [
+          " Trusted solution for reporting, analytics and catalog management",
+          "Efficient requirements gathering and implementation planning",
+        ],
+      },
+      {
+        title: "MODERN CODING FOLLOWING BEST PRACTICES",
+        items: ["and full up to date technological set of tools"],
+      },
+      {
+        title: "SCALABLE, PORTABLE and RE-CREATABLE",
+        items: [
+          "Structure easily adaptable to clients needs",
+          "nteroperability between modules and products of the OTTO suite and others dat",
+        ],
+      },
+      {
+        title: "CUSTOMIZABLE",
+        items: [
+          "to the needs of different sectors of music and media industries Digital Services, Label Services, distributors / aggregators, labels, publishers",
+        ],
+      },
+    ]);
     return {
       tab: ref("home"),
+      info_expertise,
+      textKey: "text-bold text-light-blue-14",
       url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
       url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
       url_public_site: process.env.GLOBAL_ENV.PUBLIC_SITE,
@@ -190,7 +264,8 @@ export default defineComponent({
 
 .fondo
   background: url("~/assets/background.jpg") no-repeat center center / cover
-
+.fondo-container
+  height: 560px
 
 .image-circle
   width: 200px
