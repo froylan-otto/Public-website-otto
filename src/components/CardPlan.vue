@@ -1,8 +1,7 @@
 <template>
   <q-card
-    class="card-plan shadow-6"
+    class="card-plan shadow-6 q-my-sm"
     :class="[dark ? 'bg-primary' : 'bg-white']"
-    style="width: 17%"
   >
     <q-card-section class="text-center">
       <q-avatar size="100px" class="q-mt-md bg-primary">
@@ -87,7 +86,7 @@ export default {
   padding-bottom: 0px;
 }
 .card-plan {
-  width: 15%; /* Ajusta según tus necesidades para que haya dos tarjetas por fila */
+  /*width: 15%;  Ajusta según tus necesidades para que haya dos tarjetas por fila */
   border-radius: 15px;
 }
 

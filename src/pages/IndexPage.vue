@@ -2,11 +2,8 @@
   <q-layout view="lHh lpr lFf">
     <q-page-container>
       <q-page>
-        <div class="quote fondo-container">
-          <div
-            class="q-py-xl q-px-xl full-width full-height flex flex-center fondo"
-            v-bind:style="heroImage"
-          >
+        <div class="">
+          <div class="q-py-xl q-px-xl flex flex-center" :style="heroImage">
             <h3 class="text-white text-center">
               <span class="text-h5 q-mx-xl">
                 A Data Reporting & Analytics infrastructure systems and platform
@@ -24,7 +21,7 @@
                 size="lg"
                 color="light-blue-14"
                 label="GET IT"
-                class="text-white q-mb-xl"
+                class="text-white text-bold q-mb-xl q-px-xl"
                 rounded
               />
             </h3>
@@ -40,7 +37,10 @@
           </div>
           <!-- start card information -->
           <div class="flex col justify-evenly" style="widht: 100%">
-            <card-information :Title="'Upload file'" :icon="'fas fa-check'" />
+            <card-information
+              :Title="'Upload file'"
+              :icon="'fas fa-file-upload'"
+            />
             <card-information :Title="'Process File'" :icon="'fas fa-file'" />
             <card-information :Title="'Get Report'" :icon="'fas fa-file-pen'" />
             <card-information :Title="'Process File'" />
@@ -53,15 +53,16 @@
           <h5 class="text-bold text-primary" style="margin-bottom: 0px">
             OUR KEY EXPERTISE: WHY US AND WHY NOW
           </h5>
-          <h6 class="text-grey-14 q-mt-lg q-mb-xl">
+          <h6 class="text-grey-14 q-mt-lg q-ma-xl">
             <span :class="textKey"> OTTO</span> has the foundation,
             <span :class="textKey">architecture and logic allowing </span> to
             build upon th <span :class="textKey">tools</span> and products
             saving substantial time, effort and money.
           </h6>
           <!-- sub cards -->
-          <div class="flex justify-evenly q-my-xl">
+          <div class="row justify-evenly q-my-xl">
             <card-expertise
+              class="col-lg-2 col-11"
               v-for="info in info_expertise"
               :key="info"
               :title="info.title"
@@ -77,8 +78,8 @@
           </h5>
           <q-img
             class="q-my-xl"
-            src="~/assets/imagesHome/marker-opportunity.png"
-            style="width: 60%; border-radius: 15px"
+            src="~/assets/imagesHome/marker-opportunity.svg"
+            style="width: 40%; border-radius: 15px"
           ></q-img>
         </div>
         <!-- emd marker oportunity -->
@@ -91,18 +92,13 @@
               </h5>
             </div>
           </div>
+
           <div id="id_services">
-            <div class="q-pa-xl">
+            <div class="q-pa-xl" v-for="tool in Tools" :key="tool">
               <tools-info
-                :image="'/Tools/homeDashboard.png'"
-                :title="'Dashboard'"
-                :imageFirst="false"
-              />
-              <tools-info :title="'Files'" :imageFirst="true" />
-              <tools-info
-                :image="'/Tools/homeDashboard.png'"
-                :title="'Settings'"
-                :imageFirst="false"
+                :image="tool.image"
+                :title="tool.title"
+                :imageFirst="tool.imageFirst"
               />
             </div>
           </div>
@@ -118,12 +114,22 @@
               </div>
             </div>
 
-            <div class="flex justify-evenly q-my-xl">
-              <card-plan :image="'otto-newlogo2013.png'" />
+            <div class="row justify-evenly q-ma-xl">
+              <card-plan
+                class="col-sm-12 col-xs-12 col-md-12 col-lg-2 col-xl-2"
+                :image="'otto-newlogo2013.png'"
+              />
 
-              <card-plan :image="'otto-newlogo2013.png'" />
+              <card-plan
+                class="col-sm-12 col-xs-12 col-md-12 col-lg-2 col-xl-2"
+                :image="'otto-newlogo2013.png'"
+              />
 
-              <card-plan :image="'otto-newlogo2013.png'" :dark="true" />
+              <card-plan
+                class="col-sm-12 col-xs-12 col-md-12 col-lg-2 col-xl-2"
+                :image="'otto-newlogo2013.png'"
+                :dark="true"
+              />
             </div>
 
             <!-- <div class="flex justify-center">
@@ -151,7 +157,7 @@
             <div style="width: 50%">
               <q-img
                 class="q-my-xl"
-                src="~/assets/imagesHome/ABOUT_US.png"
+                src="~/assets/imagesHome/ABOUT_US.svg"
                 style="width: 80%; border-radius: 15px"
               ></q-img>
             </div>
@@ -196,6 +202,23 @@ export default defineComponent({
   name: "IndexPage",
   components: { CardPlan, CardInformation, ToolsInfo, CardExpertise },
   setup() {
+    const Tools = [
+      {
+        image: "/Tools/homeDashboard.png",
+        title: "Dasboard",
+        imageFirst: false, // false = right
+      },
+      {
+        image: "/Tools/homeDashboard.png",
+        title: "Files",
+        imageFirst: true, // false = right
+      },
+      {
+        image: "/Tools/homeDashboard.png",
+        title: "Settings",
+        imageFirst: false, // false = right
+      },
+    ];
     const info_expertise = ref([
       {
         title: "THOROUGH KNOWLEDGE OF THE DIGITAL INDUSTRY:",
@@ -225,6 +248,7 @@ export default defineComponent({
     return {
       tab: ref("home"),
       info_expertise,
+      Tools,
       textKey: "text-bold text-light-blue-14",
       url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
       url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
@@ -245,7 +269,6 @@ export default defineComponent({
         textAlign: "center",
         boxShadow: "1px 1px 2px #e6e6e6",
         display: "inline-block",
-
         url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
         url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
         url_public_site: process.env.GLOBAL_ENV.PUBLIC_SITE,
@@ -262,10 +285,7 @@ export default defineComponent({
 
 <style lang="sass" scoped>
 
-.fondo
-  background: url("~/assets/background.jpg") no-repeat center center / cover
-.fondo-container
-  height: 560px
+
 
 .image-circle
   width: 200px
@@ -283,12 +303,6 @@ export default defineComponent({
 .box-shadow:hover
   box-shadow: 0 10px 13px -6px rgba(0, 0, 0, 0.2), 0 20px 31px 3px rgba(0, 0, 0, 0.14), 0 8px 38px 7px rgba(0, 0, 0, 0.12) !important
 
-
-.quote
-  background-size: cover
-  background-position: center
-  background-attachment: fixed
-  background-repeat: no-repeat
 
 .pricing
   background: url(/statics/images/pricing.jpg)
