@@ -29,6 +29,13 @@
           />
 
           <q-route-tab
+            @click="ridirectToOtherSite(url_contact_form)"
+            :to="{ name: 'contact' }"
+            replace
+            label="About us"
+          />
+
+          <q-route-tab
             @click="ridirectToOtherSite(url_products_site)"
             :to="{ name: 'products' }"
             replace

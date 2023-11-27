@@ -73,9 +73,7 @@
         <!-- end cards expertise -->
         <!-- start marker oportunity -->
         <div class="text-center" style="margin: 120px 0px">
-          <h5 class="text-bold text-primary">
-            A MARKET OPPORTUNITY: SEEKING ARNERS OR BUYERS
-          </h5>
+          <h5 class="text-bold text-primary">A MARKET OPPORTUNITY</h5>
           <q-img
             class="q-my-xl"
             src="~/assets/imagesHome/marker-opportunity.svg"
@@ -143,9 +141,9 @@
         <!-- start ABOUT US -->
         <div class="text-center" style="margin: 120px 0px">
           <h5 class="text-bold text-primary">ABOUT US</h5>
-          <div class="flex col">
-            <div style="width: 50%" class="text-h5 q-pa-xl flex justify-center">
-              <div style="width: 80%" class="text-justify text-grey-8">
+          <div class="row">
+            <div class="text-h5 flex items-center text-center q-mx-xl">
+              <div class="text-center text-justify text-grey-8 q-mx-xl">
                 During the past 10 YEARS, OTTO has been in the forefront of
                 technical development for the indies having designed, built and
                 managed a bespoke data and financial reporting system and a full
@@ -154,11 +152,11 @@
                 revenues.
               </div>
             </div>
-            <div style="width: 50%">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 col-xl-12">
               <q-img
-                class="q-my-xl"
+                class="q-ma-md"
                 src="~/assets/imagesHome/ABOUT_US.svg"
-                style="width: 80%; border-radius: 15px"
+                style="border-radius: 15px; width: 50%"
               ></q-img>
             </div>
           </div>

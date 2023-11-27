@@ -1,17 +1,23 @@
 <template>
-  <div class="row justify-evenly q-my-xl q-py-xl">
+  <div class="row justify-evenly" :style="containerReponsive">
     <!-- start section featurea -->
-    <div class="col-md-4 col-lg-6 col-sm-4 col-xs-12">
+    <div class="col-md-4 col-lg-6 col-sm-12 col-xs-12 q-mb-sm">
       <div
         class="text-h4 text-center text-bold text-uppercase text-light-blue-14 q-my-xl"
       >
         {{ title }}
       </div>
 
-      <q-card v-for="i in features" :key="i" flat class="q-ml-xl bg-secondary">
+      <q-card
+        v-for="i in features"
+        :key="i"
+        flat
+        class="q-ml-xl bg-secondary"
+        style="width: 100%"
+      >
         <q-item>
           <q-item-section avatar>
-            <q-icon :name="i.icon" :color="i.colorIcon" class="q-ml-xl" />
+            <q-icon :name="i.icon" :color="i.colorIcon" class="" />
           </q-item-section>
 
           <q-item-section>
@@ -27,15 +33,10 @@
     </div>
     <!-- start image section -->
     <div
-      class="col-md-8 col-lg-6 col-sm-8 col-xs-12 row justify-center"
-      :class="[imageFirst ? 'order-first rotateNegative' : 'rotatePositive']"
-      style="width: 50%"
+      class="col-md-8 col-lg-6 col-sm-12 col-xs-12 row justify-center"
+      :class="positionImage"
     >
-      <q-img
-        class="shadow-10"
-        :src="image"
-        style="width: 60%; border-radius: 15px"
-      ></q-img>
+      <q-img class="shadow-10" :src="image" :style="imgResponsive"></q-img>
     </div>
   </div>
 </template>
@@ -68,6 +69,36 @@ export default {
       default: "/Tools/homeDashboard.png",
     },
     imageFirst: { type: Boolean, default: false },
+  },
+  computed: {
+    positionImage() {
+      const class1 = "order-first rotateNegative";
+      let clase = this.imageFirst
+        ? "order-first rotateNegative"
+        : "rotatePositive";
+      // saber cuando se esta en una pantalla pequeña
+      // si es asi, se le quita la propiedad order-first por temas de responsividad
+      const isMovil =
+        this.$q.screen.sm || this.$q.screen.xs || this.$q.screen.md;
+      if (isMovil) {
+        clase = " ";
+      }
+      return clase;
+    },
+    //funcion para borderear y size ajustment image
+    imgResponsive() {
+      const isMovil = this.$q.screen.sm || this.$q.screen.xs;
+      return {
+        borderRadius: isMovil ? "5px" : "15px",
+        width: isMovil ? "100%" : "60%",
+      };
+    },
+    containerReponsive() {
+      const isMovil = this.$q.screen.sm || this.$q.screen.xs;
+      return {
+        marginBottom: isMovil ? "10px" : "100px",
+      };
+    },
   },
   setup() {},
 };
