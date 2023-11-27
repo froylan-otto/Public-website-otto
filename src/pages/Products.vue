@@ -80,7 +80,7 @@
           <div class="flex col justify-evenly" style="widht: 100%">
             <q-img
               class="q-my-xl"
-              src="~/assets/productsImages/Frame 15suite.svg"
+              src="~/assets/productsImages/Frame15suite.svg"
               style="width: 80%; border-radius: 15px"
             ></q-img>
           </div>
@@ -102,7 +102,7 @@
           <div class="flex col justify-evenly" style="widht: 100%">
             <q-img
               class="q-my-xl"
-              src="~/assets/productsImages/Frame 16generalOverview.svg"
+              src="~/assets/productsImages/Frame16generalOverview.svg"
               style="width: 80%; border-radius: 15px"
             ></q-img>
           </div>
