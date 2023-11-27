@@ -108,7 +108,7 @@
             <div class="row">
               <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
                 <h5 class="text-center text-white">
-                  <div class="text-h5 text-primary text-bold">PLANS</div>
+                  <div class="text-h5 text-primary text-bold">PRODUCTS</div>
                   <br />
                 </h5>
               </div>
@@ -122,7 +122,7 @@
 
               <card-plan
                 class="col-sm-12 col-xs-12 col-md-12 col-lg-2 col-xl-2"
-                :image="'otto-newlogo2013.png'"
+                :image="'circuloRosa.svg'"
               />
 
               <card-plan

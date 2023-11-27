@@ -9,11 +9,11 @@
       </q-avatar>
     </q-card-section>
     <q-card-section class="text-center column">
-      <q-card-title
+      <!-- <q-card-title
         class="text-h6 text-bold"
         :class="[dark ? 'text-white' : 'text-primary']"
         >Basic Plan</q-card-title
-      >
+      > -->
       <q-card-subtitle
         class="text-subtitle"
         :class="[dark ? 'text-white' : 'text-grey-10']"
