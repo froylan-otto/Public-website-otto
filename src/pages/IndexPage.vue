@@ -97,6 +97,7 @@
                 :image="tool.image"
                 :title="tool.title"
                 :imageFirst="tool.imageFirst"
+                :features="tool.features"
               />
             </div>
           </div>
@@ -205,16 +206,58 @@ export default defineComponent({
         image: "/Tools/homeDashboard.png",
         title: "Dashboard",
         imageFirst: false, // false = right
+        features: [
+          {
+            item: "Display Analytical Information",
+            icon: "fa-solid fa-chart-simple",
+            colorIcon: "orange",
+            description: " ",
+          },
+          {
+            item: "View Key Data",
+            icon: "fas fa-lightbulb",
+            colorIcon: "pink",
+            description: " ",
+          },
+        ],
       },
       {
         image: "/Tools/homeDashboard.png",
         title: "Files",
         imageFirst: true, // false = right
+        features: [
+          {
+            item: "Process sales files easily",
+            icon: "fas fa-file-export",
+            colorIcon: "orange",
+            description: " ",
+          },
+          {
+            item: "Get your reports",
+            icon: "fas fa-file-arrow-down",
+            colorIcon: "pink",
+            description: " ",
+          },
+        ],
       },
       {
         image: "/Tools/homeDashboard.png",
         title: "Settings",
         imageFirst: false, // false = right
+        features: [
+          {
+            item: "Specifies the choice report processing parameters",
+            icon: "fas fa-gear",
+            colorIcon: "orange",
+            description: " ",
+          },
+          {
+            item: "Manages organizational information",
+            icon: "fas fa-sitemap",
+            colorIcon: "pink",
+            description: " ",
+          },
+        ],
       },
     ];
     const info_expertise = ref([
