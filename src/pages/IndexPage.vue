@@ -74,6 +74,11 @@
         <!-- start marker oportunity -->
         <div class="text-center" style="margin: 120px 0px">
           <h5 class="text-bold text-primary">A MARKET OPPORTUNITY</h5>
+          <!-- <q-img
+            class="q-my-xl"
+            src="S2_Lecture.jpg"
+            style="width: 40%; border-radius: 15px"
+          ></q-img> -->
           <q-img
             class="q-my-xl"
             src="~/assets/imagesHome/marker-opportunity.svg"
@@ -115,19 +120,13 @@
 
             <div class="row justify-evenly q-ma-xl">
               <card-plan
-                class="col-sm-12 col-xs-12 col-md-12 col-lg-2 col-xl-2"
-                :image="'otto-newlogo2013.png'"
-              />
-
-              <card-plan
-                class="col-sm-12 col-xs-12 col-md-12 col-lg-2 col-xl-2"
-                :image="'circuloRosa.svg'"
-              />
-
-              <card-plan
-                class="col-sm-12 col-xs-12 col-md-12 col-lg-2 col-xl-2"
-                :image="'otto-newlogo2013.png'"
-                :dark="true"
+                v-for="item in cardPlan"
+                :key="item"
+                class="col-sm-12 col-xs-12 col-md-12 col-lg-3 col-xl-3"
+                :image="item.image"
+                :dark="item.dark"
+                :title="item.title"
+                :features="item.features"
               />
             </div>
 
@@ -201,6 +200,46 @@ export default defineComponent({
   name: "IndexPage",
   components: { CardPlan, CardInformation, ToolsInfo, CardExpertise },
   setup() {
+    const cardPlan = [
+      {
+        image: "logo-ottito.svg",
+        title: "OTTITO",
+        features: [
+          "Statements Managment",
+          "Remote file Retrieving (DSPs, Merlin)",
+          "Users & Orgs magnament",
+        ],
+        dark: false,
+      },
+      {
+        image: "/otto-newlogo2013.png",
+        title: "OTTO",
+        features: [
+          "Reporting and outputs",
+          "Business Analytics infraestructure",
+          "Users & Orgs magnament",
+          "Catalogue Audit and matching",
+          "File cleaning module",
+        ],
+        dark: false,
+      },
+      {
+        image: "/logoOAS.svg",
+        title: "OAS",
+        features: [
+          "key data snapshots",
+          "Statements Managment",
+          "Remote file Retrieving (DSPs, Merlin)",
+          "Reporting and outputs",
+          "Business Analytics infraestructure",
+          "File cleaning module",
+          "Usage Reports and Trends Managment",
+          "Users & Orgs magnament",
+          "Catalogue Audit and matching",
+        ],
+        dark: true,
+      },
+    ];
     const Tools = [
       {
         image: "/Tools/homeDashboard.png",
@@ -208,54 +247,81 @@ export default defineComponent({
         imageFirst: false, // false = right
         features: [
           {
-            item: "Display Analytical Information",
+            item: "Analytical Information",
             icon: "fa-solid fa-chart-simple",
-            colorIcon: "orange",
-            description: " ",
+            colorIcon: "red",
+            description: "Display Analytical Information ",
           },
           {
             item: "View Key Data",
             icon: "fas fa-lightbulb",
-            colorIcon: "pink",
+            colorIcon: "orange",
             description: " ",
+          },
+          {
+            item: "Snapshots",
+            icon: "far fa-rectangle-list",
+            colorIcon: "light-green",
+            description: "Summary information generated from sales reports",
           },
         ],
       },
       {
-        image: "/Tools/homeDashboard.png",
+        image: "/Tools/GnerateReport.svg",
         title: "Files",
         imageFirst: true, // false = right
         features: [
           {
-            item: "Process sales files easily",
-            icon: "fas fa-file-export",
-            colorIcon: "orange",
-            description: " ",
+            item: "Add reports",
+            icon: "fas fa-file-circle-plus",
+            colorIcon: "blue",
+            description: "Eneables manual adding of usage reports",
           },
           {
-            item: "Get your reports",
-            icon: "fas fa-file-arrow-down",
+            item: "Matching features",
+            icon: "far fa-object-ungroup",
             colorIcon: "pink",
-            description: " ",
+            description:
+              "With matching features (resulting file or unmatches sales line",
+          },
+          {
+            item: "Normalisated data",
+            icon: "fas fa-ruler",
+            colorIcon: "light-green",
+            description: "Generates a normalised CSV summary output",
+          },
+          {
+            item: "Retrieves automatically",
+            icon: "fas fa-wand-sparkles",
+            colorIcon: "orange",
+            description:
+              "Retrieves automatically files from Merlin’s members account and other DSPs FTPs to ingest usage reports",
+          },
+          {
+            item: "Download",
+            icon: "fas fa-circle-arrow-down",
+            colorIcon: "green",
+            description:
+              "Generate statements in CSV and / or PDF per label in the given report",
           },
         ],
       },
       {
-        image: "/Tools/homeDashboard.png",
+        image: "/Tools/settings.png",
         title: "Settings",
         imageFirst: false, // false = right
         features: [
           {
-            item: "Specifies the choice report processing parameters",
-            icon: "fas fa-gear",
-            colorIcon: "orange",
-            description: " ",
+            item: "Global configuration",
+            icon: "fas fa-globe",
+            colorIcon: "red",
+            description: " Specifies the choice report processing parameters",
           },
           {
-            item: "Manages organizational information",
+            item: "Especify configuration",
             icon: "fas fa-sitemap",
-            colorIcon: "pink",
-            description: " ",
+            colorIcon: "light-green",
+            description: "Manages organizational information",
           },
         ],
       },
@@ -287,6 +353,7 @@ export default defineComponent({
       },
     ]);
     return {
+      cardPlan,
       tab: ref("home"),
       info_expertise,
       Tools,

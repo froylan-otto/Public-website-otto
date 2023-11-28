@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-evenly" :style="containerReponsive">
     <!-- start section featurea -->
-    <div class="col-md-4 col-lg-6 col-sm-12 col-xs-12 q-mb-sm">
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 q-mb-sm">
       <div
         class="text-h4 text-center text-bold text-uppercase text-light-blue-14 q-my-xl"
       >
@@ -17,14 +17,14 @@
       >
         <q-item>
           <q-item-section avatar>
-            <q-icon :name="i.icon" :color="i.colorIcon" class="" />
+            <q-icon :name="i.icon" size="1.5em" :color="i.colorIcon" class="" />
           </q-item-section>
 
           <q-item-section>
-            <q-item-label class="text-h5 text-grey-7 text-bold">{{
+            <q-item-label class="text-h5 text-grey-8">{{
               i.item
             }}</q-item-label>
-            <q-item-label caption class="text-grey-6">
+            <q-item-label caption class="text-grey-7">
               {{ i.description }}
             </q-item-label>
           </q-item-section>
@@ -33,10 +33,10 @@
     </div>
     <!-- start image section -->
     <div
-      class="col-md-8 col-lg-6 col-sm-12 col-xs-12 row justify-center"
+      class="col-md-8 col-lg-8 col-sm-12 col-xs-12 row justify-center"
       :class="positionImage"
     >
-      <q-img class="shadow-10" :src="image" :style="imgResponsive"></q-img>
+      <q-img class="shadow-1" :src="image" :style="imgResponsive"></q-img>
     </div>
   </div>
 </template>
@@ -54,7 +54,7 @@ export default {
           item: "Display Analytical Information",
           icon: "fas fa-plus",
           colorIcon: "orange",
-          description: " ",
+          description: "Display Analytical Information",
         },
         {
           item: "View Key Data",

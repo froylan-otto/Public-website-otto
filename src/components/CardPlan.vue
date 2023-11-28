@@ -9,11 +9,11 @@
       </q-avatar>
     </q-card-section>
     <q-card-section class="text-center column">
-      <!-- <q-card-title
+      <q-card-title
         class="text-h6 text-bold"
         :class="[dark ? 'text-white' : 'text-primary']"
-        >Basic Plan</q-card-title
-      > -->
+        >{{ title }}</q-card-title
+      >
       <q-card-subtitle
         class="text-subtitle"
         :class="[dark ? 'text-white' : 'text-grey-10']"
@@ -61,6 +61,10 @@
 <script>
 export default {
   props: {
+    title: {
+      type: String,
+      default: "None title",
+    },
     image: {
       type: String,
       default: "/otto-newlogo2013.png",
@@ -69,12 +73,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    features: {
+      type: Array,
+      default: () => ["Feature 1", "Feature 2", "Feature 3"],
+    },
   },
   name: "CardPlan",
   setup() {
-    return {
-      features: ["Feature 1", "Feature 2", "Feature 3"], // Reemplaza con tus características estáticas
-    };
+    return {};
   },
 };
 </script>
@@ -88,14 +94,25 @@ export default {
 .card-plan {
   /*width: 15%;  Ajusta según tus necesidades para que haya dos tarjetas por fila */
   border-radius: 15px;
+  display: block;
+  position: relative;
+  /* min-height: 730px; */
 }
-
+.card-plan::after {
+  content: " ";
+  display: block;
+  height: 10em; /* ajusta según sea necesario */
+}
 .per-month {
   font-size: 0.8em;
 }
 
 .join-now-section {
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .rounded-button {
