@@ -203,7 +203,7 @@ export default defineComponent({
     const Tools = [
       {
         image: "/Tools/homeDashboard.png",
-        title: "Dasboard",
+        title: "Dashboard",
         imageFirst: false, // false = right
       },
       {

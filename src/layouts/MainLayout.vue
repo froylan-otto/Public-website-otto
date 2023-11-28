@@ -21,16 +21,16 @@
             label="Home"
           />
 
-          <q-route-tab
+          <!-- <q-route-tab
             @click="ridirectToOtherSite(url_contact_form)"
             :to="{ name: 'contact' }"
             replace
             label="Contact us"
-          />
+          /> -->
 
           <q-route-tab
-            @click="ridirectToOtherSite(url_contact_form)"
-            :to="{ name: 'contact' }"
+            @click="ridirectToOtherSite(url_about_site)"
+            :to="{ name: 'about' }"
             replace
             label="About us"
           />
@@ -79,6 +79,7 @@ export default defineComponent({
       url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
       url_public_site: process.env.GLOBAL_ENV.PUBLIC_SITE,
       url_products_site: process.env.GLOBAL_ENV.PRODUCTS_SITE,
+      url_about_site: process.env.GLOBAL_ENV.ABOUT_US,
     };
   },
   methods: {

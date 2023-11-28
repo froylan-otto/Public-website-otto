@@ -5,7 +5,7 @@
         <div class="">
           <div class="q-py-xl q-px-xl flex flex-center" :style="heroImage">
             <h3 class="text-white text-center">
-              <span class="text-h4 q-mx-xl"> PRODUCTS </span>
+              <span class="text-h4 q-mx-xl"> ABOUT US </span>
 
               <br />
               <div class="text-grey-6 text-h6 q-ml-xl q-mb-md q-mt-md">
@@ -24,89 +24,101 @@
             </h3>
           </div>
         </div>
-        <div class="bg-white q-mb-xl">
-          <div class="">
-            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-              <h5 class="text-center text-white">
-                <div class="text-h5 text-bold text-primary">
-                  INFRAESTRUCTURE
-                </div>
-              </h5>
-            </div>
-          </div>
-          <!-- start card information -->
-          <div class="flex col justify-evenly" style="widht: 100%">
-            <q-img
-              class="q-my-xl"
-              src="~/assets/productsImages/Frameinfraestructure.svg"
-              style="width: 80%; border-radius: 15px"
-            ></q-img>
-          </div>
-        </div>
-        <!-- End cards information -->
-        <q-separator />
 
-        <div class="bg-white q-mb-xl">
-          <div class="">
-            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-              <h5 class="text-center text-white">
-                <div class="text-h5 text-bold text-primary">PRODUCTS</div>
-              </h5>
-            </div>
-          </div>
-          <!-- start card information -->
-          <div class="flex col justify-evenly" style="widht: 100%">
-            <q-img
-              class="q-my-xl"
-              src="~/assets/productsImages/FrameBubble.svg"
-              style="width: 80%; border-radius: 15px"
-            ></q-img>
-          </div>
-        </div>
-        <!-- End cards information -->
-        <q-separator />
+        <q-card-section>
+          <q-tabs
+            v-model="tab"
+            dense
+            class="text-grey"
+            active-color="primary"
+            indicator-color="primary"
+            align="justify"
+            narrow-indicator
+          >
+            <q-tab name="otto" label="OTTO" />
+            <q-tab name="ottito" label="OTTITO" />
+            <q-tab name="oas" label="OAS" />
+          </q-tabs>
 
-        <div class="bg-white q-mb-xl">
-          <div class="">
-            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-              <h5 class="text-center text-white">
-                <div class="text-h5 text-bold text-primary">
-                  THE SUITE OVERVIEW
-                </div>
-              </h5>
-            </div>
-          </div>
-          <!-- start card information -->
-          <div class="flex col justify-evenly" style="widht: 100%">
-            <q-img
-              class="q-my-xl"
-              src="~/assets/productsImages/Frame15suite.svg"
-              style="width: 80%; border-radius: 15px"
-            ></q-img>
-          </div>
-        </div>
-        <!-- End cards information -->
-        <q-separator />
+          <q-separator />
 
-        <div class="bg-white q-mb-xl">
-          <div class="">
-            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-              <h5 class="text-center text-white">
-                <div class="text-h5 text-bold text-primary">
-                  GENERAL OVERVIEW
+          <q-tab-panels v-model="tab" animated>
+            <!-- start tab account  -->
+            <q-tab-panel name="otto">
+              <div class="flex col justify-evenly" style="widht: 100%">
+                <q-img
+                  class="q-my-xl"
+                  src="~/assets/productsImages/otto1.svg"
+                  style="width: 70%; border-radius: 15px"
+                ></q-img>
+
+                <q-img
+                  class="q-my-xl"
+                  src="~/assets/productsImages/otto2.svg"
+                  style="width: 70%; border-radius: 15px"
+                ></q-img>
+
+                <q-img
+                  class="q-my-xl"
+                  src="~/assets/productsImages/otto3.svg"
+                  style="width: 70%; border-radius: 15px"
+                ></q-img>
+
+                <q-img
+                  class="q-my-xl"
+                  src="~/assets/productsImages/otto4.svg"
+                  style="width: 70%; border-radius: 15px"
+                ></q-img>
+              </div>
+            </q-tab-panel>
+            <!-- end tab account -->
+
+            <!-- start tab panel profile -->
+            <q-tab-panel name="ottito">
+              <div class="flex col justify-evenly" style="widht: 100%">
+                <q-img
+                  class="q-my-xl"
+                  src="~/assets/productsImages/ottito1.svg"
+                  style="width: 70%; border-radius: 15px"
+                ></q-img>
+
+                <q-img
+                  class="q-my-xl"
+                  src="~/assets/productsImages/ottito2.svg"
+                  style="width: 70%; border-radius: 15px"
+                ></q-img>
+              </div>
+            </q-tab-panel>
+            <!-- end tab panel profile -->
+
+            <!-- Start connection -->
+            <q-tab-panel name="oas">
+              <div class="flex col justify-evenly" style="widht: 100%">
+                <div class="row">
+                  <div class="col-6 q-mt-lg">
+                    <span class="text-h4 q-mx-xl">
+                      An ongoing development project whose purpose is to provide
+                      an overall system as;
+                    </span>
+                  </div>
+                  <div class="col-6 q-mt-lg q-px-lg">
+                    <span class="text-h4 q-mx-xl"
+                      >The API IS fully customizable. The built-in UI accesses
+                      all data via an API. Any data available via the interface
+                      can be implemented. Functionalities include:
+                    </span>
+                  </div>
                 </div>
-              </h5>
-            </div>
-          </div>
-          <!-- start card information -->
-          <div class="flex col justify-evenly" style="widht: 100%">
-            <q-img
-              class="q-my-xl"
-              src="~/assets/productsImages/Frame16generalOverview.svg"
-              style="width: 80%; border-radius: 15px"
-            ></q-img>
-          </div>
-        </div>
+                <q-img
+                  class="q-my-xl"
+                  src="~/assets/productsImages/Frame16generalOverview.svg"
+                  style="width: 80%; border-radius: 15px"
+                ></q-img>
+              </div>
+            </q-tab-panel>
+            <!-- End connections -->
+          </q-tab-panels>
+        </q-card-section>
         <!-- End cards information -->
         <q-separator />
       </q-page>

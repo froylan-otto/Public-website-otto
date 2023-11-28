@@ -51,16 +51,16 @@ export default {
       type: Array,
       default: () => [
         {
-          item: "feat 1",
-          icon: "fas fa-car",
+          item: "Display Analytical Information",
+          icon: "fas fa-plus",
           colorIcon: "orange",
-          description: "loremipsum ajskdhasjkd asjkdha sdkjhasjk ",
+          description: " ",
         },
         {
-          item: "feat 2",
+          item: "View Key Data",
           icon: "fas fa-check",
           colorIcon: "pink",
-          description: "loremipsum ajskdhasjkd asjkdha sdkjhasjk ",
+          description: " ",
         },
       ],
     },
