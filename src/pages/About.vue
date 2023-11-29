@@ -12,115 +12,44 @@
                 The tool focused on the music industry
               </div>
               <br />
-              <!-- <q-btn
-                type="a"
-                @click="ridirectToOtherSite(url_contact_form)"
-                size="lg"
-                color="light-blue-14"
-                label="GET IT"
-                class="text-white text-bold q-mb-xl q-px-xl"
-                rounded
-              /> -->
             </h3>
           </div>
         </div>
 
-        <q-card-section>
-          <q-tabs
-            v-model="tab"
-            dense
-            class="text-grey"
-            active-color="primary"
-            indicator-color="primary"
-            align="justify"
-            narrow-indicator
-          >
-            <q-tab name="otto" label="OTTO" />
-            <q-tab name="ottito" label="OTTITO" />
-            <q-tab name="oas" label="OAS" />
-          </q-tabs>
-
-          <q-separator />
-
-          <q-tab-panels v-model="tab" animated>
-            <!-- start tab account  -->
-            <q-tab-panel name="otto">
-              <div class="flex col justify-evenly" style="widht: 100%">
+        <div class="q-pa-md">
+          <div class="q-gutter-md">
+            <q-carousel
+              v-model="slide"
+              transition-prev="scale"
+              transition-next="scale"
+              swipeable
+              animated
+              control-color="primary"
+              navigation
+              padding
+              arrows
+              height="700px"
+              class="text-white shadow-1 rounded-borders"
+            >
+              <q-carousel-slide name="style" class="column no-wrap flex-center">
                 <q-img
                   class="q-my-xl"
-                  src="~/assets/productsImages/otto1.svg"
-                  style="width: 70%; border-radius: 15px"
+                  src="~/assets/aboutUs/about1.svg"
+                  style="width: 550px"
                 ></q-img>
-
-                <q-img
-                  class="q-my-xl"
-                  src="~/assets/productsImages/otto2.svg"
-                  style="width: 70%; border-radius: 15px"
-                ></q-img>
-
-                <q-img
-                  class="q-my-xl"
-                  src="~/assets/productsImages/otto3.svg"
-                  style="width: 70%; border-radius: 15px"
-                ></q-img>
-
-                <q-img
-                  class="q-my-xl"
-                  src="~/assets/productsImages/otto4.svg"
-                  style="width: 70%; border-radius: 15px"
-                ></q-img>
-              </div>
-            </q-tab-panel>
-            <!-- end tab account -->
-
-            <!-- start tab panel profile -->
-            <q-tab-panel name="ottito">
-              <div class="flex col justify-evenly" style="widht: 100%">
-                <q-img
-                  class="q-my-xl"
-                  src="~/assets/productsImages/ottito1.svg"
-                  style="width: 70%; border-radius: 15px"
-                ></q-img>
-
-                <q-img
-                  class="q-my-xl"
-                  src="~/assets/productsImages/ottito2.svg"
-                  style="width: 70%; border-radius: 15px"
-                ></q-img>
-              </div>
-            </q-tab-panel>
-            <!-- end tab panel profile -->
-
-            <!-- Start connection -->
-            <q-tab-panel name="oas">
-              <div class="flex col justify-evenly" style="widht: 100%">
-                <div class="row">
-                  <div class="col-6 q-mt-lg">
-                    <span class="text-h4 q-mx-xl">
-                      An ongoing development project whose purpose is to provide
-                      an overall system as;
-                    </span>
-                  </div>
-                  <div class="col-6 q-mt-lg q-px-lg">
-                    <span class="text-h4 q-mx-xl"
-                      >The API IS fully customizable. The built-in UI accesses
-                      all data via an API. Any data available via the interface
-                      can be implemented. Functionalities include:
-                    </span>
-                  </div>
+              </q-carousel-slide>
+              <q-carousel-slide name="tv" class="column no-wrap flex-center">
+                <div class="q-mt-md text-center">
+                  <q-img
+                    class="q-my-xl"
+                    src="~/assets/aboutUs/about2.svg"
+                    style="width: 550px"
+                  ></q-img>
                 </div>
-                <q-img
-                  class="q-my-xl"
-                  src="~/assets/productsImages/Frame16generalOverview.svg"
-                  style="width: 80%; border-radius: 15px"
-                ></q-img>
-              </div>
-            </q-tab-panel>
-            <!-- End connections -->
-          </q-tab-panels>
-        </q-card-section>
-        <!-- End cards information -->
-        <q-separator />
+              </q-carousel-slide>
+            </q-carousel>
+          </div>
+        </div>
       </q-page>
     </q-page-container>
   </q-layout>
@@ -189,6 +118,9 @@ export default defineComponent({
       url_admin_site: process.env.GLOBAL_ENV.ADMIN_SITE,
       url_contact_form: process.env.GLOBAL_ENV.CONTACT_FORM,
       url_public_site: process.env.GLOBAL_ENV.PUBLIC_SITE,
+      slide: ref("style"),
+      lorem:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.",
     };
   },
   computed: {
