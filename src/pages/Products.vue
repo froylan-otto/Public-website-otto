@@ -34,6 +34,7 @@
               indicator-color="primary"
               align="justify"
               narrow-indicator
+              style="border-radius: 100px"
             >
               <q-tab name="otto" class="bg-primary">
                 <q-img
@@ -49,52 +50,60 @@
               </q-tab>
             </q-tabs>
 
-            <q-separator />
-
             <q-tab-panels v-model="tab" animated>
               <!-- start tab account  -->
               <q-tab-panel name="otto">
-                <div class="flex col justify-evenly" style="widht: 100%">
+                <!-- div class="flex col justify-evenly" style="widht: 100%"> -->
+                <div class="flex row justify-evenly">
                   <q-img
                     class="q-my-xl"
                     src="~/assets/productsImages/otto1.svg"
-                    style="width: 70%; border-radius: 15px"
+                    style="width: 800px"
                   ></q-img>
+                </div>
 
+                <div class="flex row justify-evenly">
                   <q-img
                     class="q-my-xl"
                     src="~/assets/productsImages/otto2.svg"
-                    style="width: 70%; border-radius: 15px"
+                    style="width: 800px"
                   ></q-img>
+                </div>
 
+                <div class="flex row justify-evenly">
                   <q-img
                     class="q-my-xl"
                     src="~/assets/productsImages/otto3.svg"
-                    style="width: 70%; border-radius: 15px"
+                    style="width: 800px"
                   ></q-img>
+                </div>
 
+                <div class="flex row justify-evenly">
                   <q-img
                     class="q-my-xl"
                     src="~/assets/productsImages/otto4.svg"
-                    style="width: 70%; border-radius: 15px"
+                    style="width: 800px"
                   ></q-img>
                 </div>
+                <!--  </div> -->
               </q-tab-panel>
               <!-- end tab account -->
 
               <!-- start tab panel profile -->
               <q-tab-panel name="ottito">
-                <div class="flex col justify-evenly" style="widht: 100%">
+                <div class="flex row justify-evenly">
                   <q-img
                     class="q-my-xl"
                     src="~/assets/productsImages/ottito1.svg"
-                    style="width: 70%; border-radius: 15px"
+                    style="width: 800px"
                   ></q-img>
+                </div>
 
+                <div class="flex row justify-evenly">
                   <q-img
                     class="q-my-xl"
                     src="~/assets/productsImages/ottito2.svg"
-                    style="width: 70%; border-radius: 15px"
+                    style="width: 800px"
                   ></q-img>
                 </div>
               </q-tab-panel>
@@ -121,7 +130,7 @@
                   <q-img
                     class="q-my-xl"
                     src="~/assets/productsImages/Frame16generalOverview.svg"
-                    style="width: 80%; border-radius: 15px"
+                    style="width: 800px"
                   ></q-img>
                 </div>
               </q-tab-panel>
@@ -140,11 +149,11 @@
             </div>
           </div>
           <!-- start card information -->
-          <div class="flex col justify-evenly" style="widht: 100%">
+          <div class="flex col justify-evenly">
             <q-img
-              class="q-my-xl"
+              class="q-my-md"
               src="~/assets/productsImages/Frameinfraestructure.svg"
-              style="width: 80%; border-radius: 15px"
+              style="width: 800px"
             ></q-img>
           </div>
         </div>
@@ -164,7 +173,7 @@
             <q-img
               class="q-my-xl"
               src="~/assets/productsImages/FrameBubble.svg"
-              style="width: 80%; border-radius: 15px"
+              style="width: 800px"
             ></q-img>
           </div>
         </div>
@@ -186,7 +195,7 @@
             <q-img
               class="q-my-xl"
               src="~/assets/productsImages/Frame15suite.svg"
-              style="width: 80%; border-radius: 15px"
+              style="width: 800px"
             ></q-img>
           </div>
         </div>
@@ -208,12 +217,24 @@
             <q-img
               class="q-my-xl"
               src="~/assets/productsImages/Frame16generalOverview.svg"
-              style="width: 80%; border-radius: 15px"
+              style="width: 800px"
             ></q-img>
           </div>
         </div>
         <!-- End cards information -->
         <q-separator />
+
+        <div class="row" style="background: #0d2031">
+          <div class="col-12 text-center text-h5 text-white q-py-md q-pl-xl">
+            © ottomate ltd 2023
+
+            <br />
+            <span class="text-caption">
+              A Data Reporting & Analytics infrastructure systems and platform
+              for the music industry
+            </span>
+          </div>
+        </div>
       </q-page>
     </q-page-container>
   </q-layout>
@@ -275,7 +296,7 @@ export default defineComponent({
       },
     ]);
     return {
-      tab: ref("home"),
+      tab: ref("otto"),
       info_expertise,
       Tools,
       textKey: "text-bold text-light-blue-14",

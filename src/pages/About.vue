@@ -50,6 +50,18 @@
             </q-carousel>
           </div>
         </div>
+
+        <div class="row" style="background: #0d2031">
+          <div class="col-12 text-center text-h5 text-white q-py-md q-pl-xl">
+            © ottomate ltd 2023
+
+            <br />
+            <span class="text-caption">
+              A Data Reporting & Analytics infrastructure systems and platform
+              for the music industry
+            </span>
+          </div>
+        </div>
       </q-page>
     </q-page-container>
   </q-layout>
