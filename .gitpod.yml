@@ -7,7 +7,4 @@
 tasks:
   - init: npm install
     command: cp .quasar.env.json.example .quasar.env.json
-    
-    command: npm install -g @quasar/cli
-
     command: quasar dev
