@@ -6,11 +6,8 @@
 
 tasks:
   - init: npm install
-  - name: Copy env file
     command: cp .quasar.env.json.example .quasar.env.json
     
-  - nuame: Install quasar/cli
     command: npm install -g @quasar/cli
-    
-  - nuame: run proyect in dev
+
     command: quasar dev
