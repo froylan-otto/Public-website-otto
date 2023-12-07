@@ -87,6 +87,26 @@
         </div>
         <!-- emd marker oportunity -->
 
+        <div class="bg-white q-mb-xl">
+          <div class="">
+            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+              <h5 class="text-center text-white">
+                <div class="text-h5 text-bold text-primary">
+                  THE SUITE OVERVIEW
+                </div>
+              </h5>
+            </div>
+          </div>
+          <!-- start card information -->
+          <div class="flex col justify-evenly" style="widht: 100%">
+            <q-img
+              class="q-my-xl"
+              src="~/assets/productsImages/Frame15suite.svg"
+              style="width: 800px"
+            ></q-img>
+          </div>
+        </div>
+
         <div style="background: #e3f6f5" class="q-py-xl">
           <div class="row">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
@@ -112,7 +132,9 @@
             <div class="row">
               <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
                 <h5 class="text-center text-white">
-                  <div class="text-h5 text-primary text-bold">PRODUCTS</div>
+                  <div class="text-h5 text-primary text-bold">
+                    PRODUCTS AND SERVICES
+                  </div>
                   <br />
                 </h5>
               </div>
@@ -127,6 +149,8 @@
                 :dark="item.dark"
                 :title="item.title"
                 :features="item.features"
+                :tab="item.tab"
+                @tabSelected="selectTab"
               />
             </div>
 
@@ -136,32 +160,123 @@
               <card-plan :dark="true" />
             </div> -->
           </div>
-        </div>
 
-        <!-- start ABOUT US -->
-        <div class="text-center" style="margin: 120px 0px">
-          <h5 class="text-bold text-primary">ABOUT US</h5>
-          <div class="row">
-            <div class="text-h5 flex items-center text-center q-mx-xl">
-              <div class="text-center text-justify text-grey-8 q-mx-xl">
-                During the past 10 YEARS, OTTO has been in the forefront of
-                technical development for the indies having designed, built and
-                managed a bespoke data and financial reporting system and a full
-                CRM system for Merlin Network, the global rights agency serving
-                over 20% of the music industry, processing OVER $2BN in
-                revenues.
-              </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 col-xl-12">
-              <q-img
-                class="q-ma-md"
-                src="~/assets/imagesHome/ABOUT_US.svg"
-                style="border-radius: 15px; width: 50%"
-              ></q-img>
-            </div>
+          <div class="bg-white q-mx-xl">
+            <q-card-section>
+              <q-tabs
+                v-model="tab"
+                dense
+                class="text-grey"
+                active-color="primary"
+                indicator-color="primary"
+                align="justify"
+                narrow-indicator
+                style="border-radius: 100px"
+              >
+                <q-tab name="otto" class="bg-primary">
+                  <q-img
+                    src="otto-newlogo2013.png"
+                    style="width: 70px; border-radius: 100px"
+                  ></q-img>
+                </q-tab>
+                <q-tab name="ottito" class="bg-primary">
+                  <q-img src="logo-ottito.svg" style="width: 70px"></q-img>
+                </q-tab>
+                <q-tab name="oas" class="bg-primary">
+                  <q-img src="logoOAS.svg" style="width: 70px"></q-img>
+                </q-tab>
+              </q-tabs>
+
+              <q-tab-panels v-model="tab" animated>
+                <!-- start tab account  -->
+                <q-tab-panel name="otto">
+                  <!-- div class="flex col justify-evenly" style="widht: 100%"> -->
+                  <div class="flex row justify-evenly">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/otto1.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+
+                  <div class="flex row justify-evenly">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/otto2.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+
+                  <div class="flex row justify-evenly">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/otto3.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+
+                  <div class="flex row justify-evenly">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/otto4.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+                  <!--  </div> -->
+                </q-tab-panel>
+                <!-- end tab account -->
+
+                <!-- start tab panel profile -->
+                <q-tab-panel name="ottito">
+                  <div class="flex row justify-evenly">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/ottito1.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+
+                  <div class="flex row justify-evenly">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/ottito2.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+                </q-tab-panel>
+                <!-- end tab panel profile -->
+
+                <!-- Start connection -->
+                <q-tab-panel name="oas">
+                  <div class="flex col justify-evenly" style="widht: 100%">
+                    <div class="row">
+                      <div class="col-6 q-mt-lg">
+                        <span class="text-h4 q-mx-xl">
+                          An ongoing development project whose purpose is to
+                          provide an overall system as;
+                        </span>
+                      </div>
+                      <div class="col-6 q-mt-lg q-px-lg">
+                        <span class="text-h4 q-mx-xl"
+                          >The API IS fully customizable. The built-in UI
+                          accesses all data via an API. Any data available via
+                          the interface can be implemented. Functionalities
+                          include:
+                        </span>
+                      </div>
+                    </div>
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/Frame16generalOverview.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+                </q-tab-panel>
+                <!-- End connections -->
+              </q-tab-panels>
+            </q-card-section>
           </div>
         </div>
-        <!-- emd ABOUT US -->
 
         <div class="row" style="background: #0d2031">
           <div class="col-12 text-center text-h5 text-white q-py-md q-pl-xl">
@@ -173,15 +288,6 @@
               for the music industry
             </span>
           </div>
-          <!-- <div class="col-7 q-py-md text-white">
-            <div class="text-h6 text-white">PRODUCTS</div>
-
-            <q-list class="text-white">
-              <q-item-label>OTTO-light</q-item-label>
-              <q-item-label>Otto as a Service</q-item-label>
-              <q-item-label>Ottito</q-item-label>
-            </q-list>
-          </div> -->
         </div>
       </q-page>
     </q-page-container>
@@ -210,6 +316,7 @@ export default defineComponent({
           "Users & Orgs magnament",
         ],
         dark: false,
+        tab: "ottito",
       },
       {
         image: "/otto-newlogo2013.png",
@@ -222,6 +329,7 @@ export default defineComponent({
           "File cleaning module",
         ],
         dark: false,
+        tab: "otto",
       },
       {
         image: "/logoOAS.svg",
@@ -238,6 +346,7 @@ export default defineComponent({
           "Catalogue Audit and matching",
         ],
         dark: true,
+        tab: "oas",
       },
     ];
     const Tools = [
@@ -354,7 +463,7 @@ export default defineComponent({
     ]);
     return {
       cardPlan,
-      tab: ref("home"),
+      tab: ref("otto"),
       info_expertise,
       Tools,
       textKey: "text-bold text-light-blue-14",
@@ -386,6 +495,9 @@ export default defineComponent({
   methods: {
     ridirectToOtherSite(url) {
       window.location.href = url;
+    },
+    selectTab(tabName) {
+      this.tab = tabName;
     },
   },
 });

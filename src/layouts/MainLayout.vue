@@ -21,13 +21,6 @@
             label="Home"
           />
 
-          <!-- <q-route-tab
-            @click="ridirectToOtherSite(url_contact_form)"
-            :to="{ name: 'contact' }"
-            replace
-            label="Contact us"
-          /> -->
-
           <q-route-tab
             @click="ridirectToOtherSite(url_about_site)"
             :to="{ name: 'about' }"
@@ -41,6 +34,13 @@
             replace
             label="Products"
           />
+
+          <q-route-tab
+            @click="ridirectToOtherSite(url_contact_form)"
+            :to="{ name: 'contact' }"
+            replace
+            label="Contact us"
+          />
           <!--<q-route-tab
             @click="ridirectToOtherSite(url_presentation)"
             :to="{ name: 'presentation' }"
@@ -48,9 +48,19 @@
           />-->
 
           <!-- <q-route-tab :to="{ name: 'register' }" replace label="Register" /> -->
-          <q-route-tab
-            @click="ridirectToOtherSite(url_admin_site)"
+          <!-- <q-route-tab>
+            <q-btn
+              color="light-blue-14"
+              icon="login"
+              label="SIGN IN"
+              @click="ridirectToOtherSite(url_admin_site)"
+            />
+          </q-route-tab> -->
+          <q-btn
+            color="light-blue-14"
+            icon="login"
             label="SIGN IN"
+            @click="ridirectToOtherSite(url_admin_site)"
           />
           <!-- <q-route-tab :to="{ name: 'signup' }" label="SIGN UP" /> -->
           <!-- <q-route-tab :to="{ name: 'registration' }" label="REGISTRATION" /> -->

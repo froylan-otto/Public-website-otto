@@ -17,37 +17,68 @@
         </div>
 
         <div class="q-pa-md">
-          <div class="q-gutter-md">
-            <q-carousel
-              v-model="slide"
-              transition-prev="scale"
-              transition-next="scale"
-              swipeable
-              animated
-              control-color="primary"
-              navigation
-              padding
-              arrows
-              height="700px"
-              class="text-white shadow-1 rounded-borders"
-            >
-              <q-carousel-slide name="style" class="column no-wrap flex-center">
+          <!-- start ABOUT US -->
+          <div class="text-center" style="margin: 120px 0px">
+            <h5 class="text-bold text-primary">ABOUT US</h5>
+            <div class="row">
+              <div class="text-h5 flex items-center text-center q-mx-xl">
+                <div class="text-center text-justify text-grey-8 q-mx-xl">
+                  During the past 10 YEARS, OTTO has been in the forefront of
+                  technical development for the indies having designed, built
+                  and managed a bespoke data and financial reporting system and
+                  a full CRM system for Merlin Network, the global rights agency
+                  serving over 20% of the music industry, processing OVER $2BN
+                  in revenues.
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 col-xl-12">
                 <q-img
-                  class="q-my-xl"
-                  src="~/assets/aboutUs/about1.svg"
-                  style="width: 550px"
+                  class="q-ma-md"
+                  src="~/assets/imagesHome/ABOUT_US.svg"
+                  style="border-radius: 15px; width: 50%"
                 ></q-img>
-              </q-carousel-slide>
-              <q-carousel-slide name="tv" class="column no-wrap flex-center">
-                <div class="q-mt-md text-center">
+              </div>
+            </div>
+          </div>
+          <!-- emd ABOUT US -->
+
+          <div class="q-gutter-md">
+            <div class="text-center" style="margin: 120px 0px">
+              <h5 class="text-bold text-primary">TESTIMONIALS</h5>
+              <q-carousel
+                v-model="slide"
+                transition-prev="scale"
+                transition-next="scale"
+                swipeable
+                animated
+                control-color="primary"
+                navigation
+                padding
+                arrows
+                height="700px"
+                class="text-white shadow-1 rounded-borders"
+              >
+                <q-carousel-slide
+                  name="style"
+                  class="column no-wrap flex-center"
+                >
                   <q-img
                     class="q-my-xl"
-                    src="~/assets/aboutUs/about2.svg"
+                    src="~/assets/aboutUs/about1.svg"
                     style="width: 550px"
                   ></q-img>
-                </div>
-              </q-carousel-slide>
-            </q-carousel>
+                </q-carousel-slide>
+                <q-carousel-slide name="tv" class="column no-wrap flex-center">
+                  <div class="q-mt-md text-center">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/aboutUs/about2.svg"
+                      style="width: 550px"
+                    ></q-img>
+                  </div>
+                </q-carousel-slide>
+              </q-carousel>
+            </div>
           </div>
         </div>
 

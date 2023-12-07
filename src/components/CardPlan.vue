@@ -21,7 +21,7 @@
       >
       <!-- precio membrecia -->
       <div class="q-my-md">
-        <q-card-title
+        <!-- <q-card-title
           class="text-h3 text-bold"
           :class="[dark ? 'text-white' : 'text-primary']"
           style="font-weight: 900"
@@ -31,7 +31,7 @@
           class="text-subtitle text-subtitle"
           :class="[dark ? 'text-white' : ' text-grey-8']"
           >/per month</q-card-subtitle
-        >
+        > -->
       </div>
     </q-card-section>
 
@@ -42,7 +42,7 @@
         </q-item-section>
         <q-item-section class="">
           <q-item-label :class="[dark ? 'text-white' : ' text-grey-14']">{{
-            feature + index
+            feature
           }}</q-item-label>
         </q-item-section>
       </q-item>
@@ -52,7 +52,8 @@
       <q-btn
         class="join-now-btn rounded-button shadow-10 q-my-lg"
         color="light-blue-14"
-        label="Join Now"
+        label="Details"
+        @click="goToDetails(tab)"
       />
     </q-card-section>
   </q-card>
@@ -73,6 +74,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    tab: {
+      type: String,
+      default: "otto",
+    },
     features: {
       type: Array,
       default: () => ["Feature 1", "Feature 2", "Feature 3"],
@@ -81,6 +86,12 @@ export default {
   name: "CardPlan",
   setup() {
     return {};
+  },
+  methods: {
+    goToDetails(tab) {
+      console.log("Go to details");
+      this.$emit("tabSelected", tab);
+    },
   },
 };
 </script>
