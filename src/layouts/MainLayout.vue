@@ -61,6 +61,7 @@
             icon="login"
             label="SIGN IN"
             @click="ridirectToOtherSite(url_admin_site)"
+            rounded
           />
           <!-- <q-route-tab :to="{ name: 'signup' }" label="SIGN UP" /> -->
           <!-- <q-route-tab :to="{ name: 'registration' }" label="REGISTRATION" /> -->

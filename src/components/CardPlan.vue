@@ -89,8 +89,9 @@ export default {
   },
   methods: {
     goToDetails(tab) {
-      console.log("Go to details");
       this.$emit("tabSelected", tab);
+      var elmnt = document.getElementById(tab);
+      elmnt.scrollIntoView();
     },
   },
 };

@@ -111,6 +111,27 @@
         <!-- End cards information -->
         <q-separator />
 
+        <div style="background: #e3f6f5" class="q-py-xl">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+              <h5 class="text-center text-white">
+                <div class="text-h4 text-bold text-primary">TOOLS</div>
+              </h5>
+            </div>
+          </div>
+
+          <div id="id_services">
+            <div class="q-pa-xl" v-for="tool in Tools" :key="tool">
+              <tools-info
+                :image="tool.image"
+                :title="tool.title"
+                :imageFirst="tool.imageFirst"
+                :features="tool.features"
+              />
+            </div>
+          </div>
+        </div>
+
         <div class="row" style="background: #0d2031">
           <div class="col-12 text-center text-h5 text-white q-py-md q-pl-xl">
             © ottomate ltd 2023
@@ -137,7 +158,7 @@ import CardExpertise from "src/components/CardExpertise.vue";
 
 export default defineComponent({
   name: "IndexPage",
-  components: {},
+  components: { ToolsInfo },
   setup() {
     const Tools = [
       {

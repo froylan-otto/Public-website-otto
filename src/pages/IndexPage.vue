@@ -107,26 +107,6 @@
           </div>
         </div>
 
-        <div style="background: #e3f6f5" class="q-py-xl">
-          <div class="row">
-            <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-              <h5 class="text-center text-white">
-                <div class="text-h4 text-bold text-primary">TOOLS</div>
-              </h5>
-            </div>
-          </div>
-
-          <div id="id_services">
-            <div class="q-pa-xl" v-for="tool in Tools" :key="tool">
-              <tools-info
-                :image="tool.image"
-                :title="tool.title"
-                :imageFirst="tool.imageFirst"
-                :features="tool.features"
-              />
-            </div>
-          </div>
-        </div>
         <div class="pricing" id="id_pricing">
           <div class="q-py-xl">
             <div class="row">
@@ -161,7 +141,7 @@
             </div> -->
           </div>
 
-          <div class="bg-white q-mx-xl">
+          <div class="bg-white q-mx-xl" id="details">
             <q-card-section>
               <q-tabs
                 v-model="tab"
@@ -173,21 +153,42 @@
                 narrow-indicator
                 style="border-radius: 100px"
               >
+                <q-tab name="ottito" class="bg-primary">
+                  <q-img src="logo-ottito.svg" style="width: 70px"></q-img>
+                </q-tab>
                 <q-tab name="otto" class="bg-primary">
                   <q-img
                     src="otto-newlogo2013.png"
                     style="width: 70px; border-radius: 100px"
                   ></q-img>
                 </q-tab>
-                <q-tab name="ottito" class="bg-primary">
-                  <q-img src="logo-ottito.svg" style="width: 70px"></q-img>
-                </q-tab>
+
                 <q-tab name="oas" class="bg-primary">
                   <q-img src="logoOAS.svg" style="width: 70px"></q-img>
                 </q-tab>
               </q-tabs>
 
               <q-tab-panels v-model="tab" animated>
+                <!-- start tab panel profile -->
+                <q-tab-panel name="ottito">
+                  <div class="flex row justify-evenly">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/ottito1.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+
+                  <div class="flex row justify-evenly">
+                    <q-img
+                      class="q-my-xl"
+                      src="~/assets/productsImages/ottito2.svg"
+                      style="width: 800px"
+                    ></q-img>
+                  </div>
+                </q-tab-panel>
+                <!-- end tab panel profile -->
+
                 <!-- start tab account  -->
                 <q-tab-panel name="otto">
                   <!-- div class="flex col justify-evenly" style="widht: 100%"> -->
@@ -225,26 +226,6 @@
                   <!--  </div> -->
                 </q-tab-panel>
                 <!-- end tab account -->
-
-                <!-- start tab panel profile -->
-                <q-tab-panel name="ottito">
-                  <div class="flex row justify-evenly">
-                    <q-img
-                      class="q-my-xl"
-                      src="~/assets/productsImages/ottito1.svg"
-                      style="width: 800px"
-                    ></q-img>
-                  </div>
-
-                  <div class="flex row justify-evenly">
-                    <q-img
-                      class="q-my-xl"
-                      src="~/assets/productsImages/ottito2.svg"
-                      style="width: 800px"
-                    ></q-img>
-                  </div>
-                </q-tab-panel>
-                <!-- end tab panel profile -->
 
                 <!-- Start connection -->
                 <q-tab-panel name="oas">
@@ -299,12 +280,11 @@ import { defineComponent, ref } from "vue";
 import { useQuasar } from "quasar";
 import CardPlan from "src/components/CardPlan.vue";
 import CardInformation from "src/components/CardInformation.vue";
-import ToolsInfo from "src/components/ToolsInfo.vue";
 import CardExpertise from "src/components/CardExpertise.vue";
 
 export default defineComponent({
   name: "IndexPage",
-  components: { CardPlan, CardInformation, ToolsInfo, CardExpertise },
+  components: { CardPlan, CardInformation, CardExpertise },
   setup() {
     const cardPlan = [
       {
@@ -497,6 +477,9 @@ export default defineComponent({
       window.location.href = url;
     },
     selectTab(tabName) {
+      //details
+      var elmnt = document.getElementById("details");
+      elmnt.scrollIntoView();
       this.tab = tabName;
     },
   },
